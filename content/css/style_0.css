@@ -1,0 +1,73 @@
+﻿body{
+	width:100%;
+	height:100%;
+	background:#99FFAF;
+}
+main{
+	padding-top:50px;
+	width:100%;
+	height:auto;
+	display:-webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-flex-wrap:wrap;
+	-webkit-justify-content:space-around;
+}
+h3{
+	width:100%;
+	height:100px;
+	background:blue;
+	display:-webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-flex-wrap:nowrap;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
+}
+div[class^="box"]{
+	margin-top:10px;
+	margin-bottom:10px;
+	width:430px;
+}
+
+/*メニューボックス*/
+.box_menu{
+	background:royalblue;
+	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+}
+.box_menu h4{
+	width:100%;
+	height:30px;
+	font-size:20px;
+	display:-webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-flex-wrap:nowrap;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
+}
+.box_menu ul{
+	display:-webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-flex-wrap:wrap;
+	-webkit-justify-content:space-around;
+}
+.box_menu li{
+	width:200px;
+	height:170px;
+	background:white;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+}
+
+/*お知らせボックス*/
+.box_info{
+	border:1px solid blue;
+	background:green;
+	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+}
+
+/*twitterボックス*/
+.box_twitter{
+	height:400px;
+	overflow: scroll;
+	border:1px solid orange;
+}
