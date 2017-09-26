@@ -25,9 +25,7 @@
 			<div class="box_menu">
 				<h4>案内</h3>
 				<ul>
-					<li>
-						<img src="./content/img/tsunami.png" width="70%">
-					</li>
+					<li><a href="#"><img src="./content/img/tsunami2.png"></a></li>
 					<li>
 					</li>
 					<li>
