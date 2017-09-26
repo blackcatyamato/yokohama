@@ -9,6 +9,7 @@ git push -u origin master
 dora
 git環境構築(済)
 横浜市公式twitter取得(済)
+データベースその他
 
 t4i
 データベース(済)
