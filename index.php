@@ -15,34 +15,36 @@
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 	</head>
 	<body>
-		<header>
-			<h1>
-				YDP
-			</h1>
-		</header>
-		<main>
-			<h3>まずは落ち着きましょう…</h3>
-			<div class="box_menu">
-				<h4>案内</h3>
-				<ul>
-					<li><a href="#"><img src="./content/img/tsunami2.png"></a></li>
-					<li>
-					</li>
-					<li>
-					</li>
-					<li>
-					</li>
-				</ul>
-			</div>
-			<div class="box_info">
-			</div>
-			<div class="box_twitter">
-				<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
-				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-			</div>
-		</main>
-		<footer>
-			<p>よこはま</p>
-		</footer>
+		<div class="wrap">
+			<header>
+				<h1>
+					YDP
+				</h1>
+			</header>
+			<main>
+				<h3>まずは落ち着きましょう…</h3>
+				<div class="box_menu">
+					<h4>案内</h3>
+					<ul>
+						<li><a href="#"><img src="./content/img/tsunami2.png"></a></li>
+						<li>
+						</li>
+						<li>
+						</li>
+						<li>
+						</li>
+					</ul>
+				</div>
+				<div class="box_info">
+				</div>
+				<div class="box_twitter">
+					<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
+					<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</main>
+			<footer>
+				<p>よこはま</p>
+			</footer>
+		</div>
 	</body>
 </html>
