@@ -3,6 +3,20 @@ git@github.com:doragonabe/yokohama.git
 
 
 <<<<<<< HEAD
+
+git remote add origin git@github.com:doragonabe/yokohama.git
+git push -u origin master
+
+
+dora
+
+
+t4i
+
+
+con
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -10,3 +24,4 @@ git@github.com:doragonabe/yokohama.git
 >>>>>>> remotes/origin/master2
 git remote add origin git@github.com:doragonabe/yokohama.git
 git push -u origin master
+>>>>>>> 50a84563f4fad1f064888c68ec158a12a2be45b2
