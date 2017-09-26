@@ -8,21 +8,13 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
+	<head id="hd">
 		<meta chraset="UTF-8">
-		<script type="text/javascript">
-			var onot = window.onorientation;
-			if(onot==0 || onot==180){
-				document.all.tags("head").innerHTML = "<meta name=\"viewport\" content=\"width=640,initial-scale=1\">;
-			}else{
-				document.all.tags("head").innerHTML = "<meta name=\"viewport\" content=\"width=1280,initial-scale=1\">;
-				document.all.tags("head").innerHTML = "<meta name=\"viewport\" content=\"width=1280,initial-scale=1\">;
-			}
-		</script>
+		<meta name="viewport" content="width=640,initial-scale=1">
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_0.css">
-		<title>横浜防災案内-Yokohama Disaster Prevention</title>
+		<title id="ti">横浜防災案内-Yokohama Disaster Prevention</title>
 	</head>
 	<body>
 		<header>

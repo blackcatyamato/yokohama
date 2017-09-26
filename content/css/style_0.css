@@ -89,7 +89,7 @@ div[class^="box"]{
 		background:red;
 	}
 }
-@media screen and (width:1280px){
+@media screen and (min-width:1280px){
 	body{
 		background:yellow;
 	}
