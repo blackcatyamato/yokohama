@@ -9,6 +9,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta chraset="UTF-8">
+		<script type="text/javascript">
+			var onot = window.onorientation;
+			if(onot==0 || onot==180){
+				document.all.tags("head").innerHTML = "<meta name=\"viewport\" content=\"width=640,initial-scale=1\">;
+			}else{
+				document.all.tags("head").innerHTML = "<meta name=\"viewport\" content=\"width=1280,initial-scale=1\">;
+				document.all.tags("head").innerHTML = "<meta name=\"viewport\" content=\"width=1280,initial-scale=1\">;
+			}
+		</script>
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_0.css">
