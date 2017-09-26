@@ -70,6 +70,7 @@ div[class^="box"]{
 	display:-webkit-flex;
 	-webkit-flex-direction:row;
 	-webkit-flex-wrap:nowrap;
+	-webkit-justify-content:center;
 	-webkit-align-items:center;
 }
 
@@ -85,4 +86,15 @@ div[class^="box"]{
 	height:400px;
 	overflow: scroll;
 	border:1px solid orange;
+}
+
+@media screen and (max-width:640px){
+	body{
+		background:red;
+	}
+}
+@media screen and (width:1280px){
+	body{
+		background:yellow;
+	}
 }
