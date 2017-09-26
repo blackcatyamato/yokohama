@@ -56,6 +56,13 @@ div[class^="box"]{
 	margin-top:10px;
 	margin-bottom:10px;
 	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+<<<<<<< HEAD
+=======
+	display:-webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-flex-wrap:nowrap;
+	-webkit-align-items:center;
+>>>>>>> 50a84563f4fad1f064888c68ec158a12a2be45b2
 }
 
 /*お知らせボックス*/

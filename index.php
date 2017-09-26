@@ -26,6 +26,10 @@
 				<h4>案内</h3>
 				<ul>
 					<li>
+<<<<<<< HEAD
+=======
+						<img src="./content/img/tsunami.png" width="70%">
+>>>>>>> 50a84563f4fad1f064888c68ec158a12a2be45b2
 					</li>
 					<li>
 					</li>
