@@ -67,9 +67,7 @@ div[class^="box"]{
 	margin-top:10px;
 	margin-bottom:10px;
 	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
-	display: flex;
 
-}
 
 /*お知らせボックス*/
 .box_info{
@@ -85,7 +83,10 @@ div[class^="box"]{
 	border:1px solid orange;
 }
 
-@media screen and (max-width:640px){
+
+/* sinihisaスマホ */
+@media all and (max-width: 480px){
+
 	body{
 		background:red;
 	}

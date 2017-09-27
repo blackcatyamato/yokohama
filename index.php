@@ -46,5 +46,23 @@
 				<p>よこはま</p>
 			</footer>
 		</div>
+					<li>
+					</li>
+					<li>
+					</li>
+					<li>
+					</li>
+				</ul>
+			</div>
+			<div class="box_info">
+			</div>
+			<div class="box_twitter">
+				<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
+				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</main>
+		<footer>
+			<p>よこはま</p>
+		</footer>
 	</body>
 </html>
