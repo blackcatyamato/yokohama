@@ -1,34 +1,65 @@
 <?php
+
+/****仮*************************/
 	$stmt = $pdo->query("
+				SELECT
+					Ward,
+					WardCode
+				FROM
+					hinanjo
+				GROUP BY
+					Ward
+				ORDER BY
+					WardCode ASC
+			");
+	$i = 1;
+	$ward_content = 0;
+	foreach($stmt as $row){
+		$ward_list[$i] = htmlspecialchars($row["Ward"]);
+
+		$i++;
+		$ward_content++;
+	}
+
+/******************************/
+
+
+
+	$stmt = $pdo->prepare("
 				SELECT
 					Type,
 					Definition,
 					Name,
 					Address,
-					Let,
+					Lat,
 					Lon,
 					Ward,
 					WardCode
 				FROM
 					hinanjo
+				WHERE
+					Type LIKE '%' AND
+					Ward LIKE ?
 			");
+	$stmt->bindValue(1, $aa, PDO::PARAM_STR);
+	$stmt->execute();
 
 	$i = 1;
-	foreach((array)$stmt as $row){
+	$content = 0;
+	foreach($stmt as $row){
 
 		$type[$i] = htmlspecialchars($row["Type"]);
 		$definition[$i] = htmlspecialchars($row["Definition"]);
 		$name[$i] = htmlspecialchars($row["Name"]);
 		$address[$i] = htmlspecialchars($row["Address"]);
-		$let[$i] = htmlspecialchars($row["Let"]);
+		$lat[$i] = htmlspecialchars($row["Lat"]);
 		$lon[$i] = htmlspecialchars($row["Lon"]);
-		$kana[$i] = htmlspecialchars($row["Kana"]);
 		$ward[$i] = htmlspecialchars($row["Ward"]);
 		$wardCode[$i] = htmlspecialchars($row["WardCode"]);
 
 
 		$i++;
-
+		$content++;
 	}
 
 ?>
