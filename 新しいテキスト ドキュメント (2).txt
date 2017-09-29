@@ -2,26 +2,18 @@ https://github.com/doragonabe/yokohama.git
 git@github.com:doragonabe/yokohama.git
 
 
-<<<<<<< HEAD
-
 git remote add origin git@github.com:doragonabe/yokohama.git
 git push -u origin master
 
 
 dora
-
+git環境構築(済)
+横浜市公式twitter取得(済)
+データベース接続処理
 
 t4i
+データベース(済)
 
 
 con
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> remotes/origin/master2
-git remote add origin git@github.com:doragonabe/yokohama.git
-git push -u origin master
->>>>>>> 50a84563f4fad1f064888c68ec158a12a2be45b2
+デザイン
