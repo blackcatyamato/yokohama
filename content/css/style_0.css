@@ -1,11 +1,14 @@
 html{
+	height: 100%;
+}
+
+body{
 	height:100%;
 }
 
-﻿body{
-	width:100%;
-	min-height:100%;
-	background:#99FFAF;
+.wrap{
+	min-height: 100%;
+	background: #D3D3D3;
 }
 
 img{
@@ -14,35 +17,36 @@ img{
 
 main{
 	padding-top:50px;
-	width:100%;
 	height:auto;
 	display:-webkit-flex;
 	-webkit-flex-direction:row;
 	-webkit-flex-wrap:wrap;
 	-webkit-justify-content:space-around;
 }
+
 h3{
 	width:100%;
 	height:100px;
-	background:blue;
+	background:#99ff99;
 	display:-webkit-flex;
 	-webkit-flex-direction:row;
 	-webkit-flex-wrap:nowrap;
 	-webkit-justify-content:center;
 	-webkit-align-items:center;
 }
+
 div[class^="box"]{
-	margin-top:10px;
-	margin-bottom:10px;
+	margin:10px 0;
 	width:430px;
 }
 
 /*メニューボックス*/
 .box_menu{
-	background:royalblue;
-	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+	background:#A7BCBB;
+	border:5px solid #ECDF2B;
+	border-radius:10px;
 }
-.box_menu h4{
+h4{
 	width:100%;
 	height:30px;
 	font-size:20px;
@@ -52,28 +56,25 @@ div[class^="box"]{
 	-webkit-justify-content:center;
 	-webkit-align-items:center;
 }
-.box_menu ul{
+ul{
 	display:-webkit-flex;
 	-webkit-flex-direction:row;
 	-webkit-flex-wrap:wrap;
 	-webkit-justify-content:space-around;
 }
-.box_menu li{
+li{
 	overflow: hidden;
-
 	width:200px;
 	height:170px;
-	background:white;
-	margin-top:10px;
-	margin-bottom:10px;
-	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
-
+	margin:10px 0;
+	border-radius:10px;
+}
 
 /*お知らせボックス*/
 .box_info{
-	border:1px solid blue;
-	background:green;
-	border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+	border:2px solid blue;
+	background:#B2FFD8;
+	border-radius:10px;
 }
 
 /*twitterボックス*/
@@ -85,13 +86,12 @@ div[class^="box"]{
 
 
 /* sinihisaスマホ */
-@media all and (max-width: 480px){
-
+@media all and (min-width: 480px){
 	body{
 		background:red;
 	}
 }
-@media screen and (width:1280px){
+@media screen and (max-width:960px){
 	body{
 		background:yellow;
 	}
