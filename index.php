@@ -12,8 +12,7 @@
 		<meta charset="utf-8">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
-		<link rel="stylesheet" href="<?=$path?>content/css/style_common.css">
-		<link rel="stylesheet" href="<?=$path?>content/css/style_0.css">
+		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
 	</head>
 
 	<body>
