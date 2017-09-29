@@ -55,7 +55,6 @@
 						<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
 						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
-
 			</main>
 		</div>
 	</body>
