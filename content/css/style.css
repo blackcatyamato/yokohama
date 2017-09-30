@@ -24,16 +24,10 @@ header{
 	top:0;
 
 	width:100%;
-
-
-
-
-
 }
 h1{
 	height:auto;
 	width:auto;
-
 }
 
 footer{
@@ -51,10 +45,7 @@ img{
 
 main{
 	display: flex;
-	display:-webkit-flex;
-	-webkit-flex-direction:row;
 	-webkit-flex-wrap:wrap;
-	height:auto;
 	-webkit-justify-content:space-around;
 	padding-top:50px;
 
@@ -63,8 +54,6 @@ main{
 h3{
 	background:#99ff99;
 	display: flex;
-	display:-webkit-flex;
-	-webkit-flex-direction:row;
 	-webkit-flex-wrap:nowrap;
 	-webkit-justify-content:center;
 	-webkit-align-items:center;
@@ -85,8 +74,6 @@ div[class^="box"]{
 }
 h4{
 	display: flex;
-	display:-webkit-flex;
-	-webkit-flex-direction:row;
 	-webkit-flex-wrap:nowrap;
 	-webkit-justify-content:center;
 	-webkit-align-items:center;
@@ -100,8 +87,6 @@ h4{
 }
 ul{
 	display: flex;
-	display:-webkit-flex;
-	-webkit-flex-direction:row;
 	-webkit-flex-wrap:wrap;
 	-webkit-justify-content:space-around;
 }
@@ -135,36 +120,42 @@ li{
 
 }
 
-/*
-.tab_ber{
-	display: none;
+
+/****タブバー***********************/
+main{
+	padding-bottom: 60px;
 }
-*/
+.tab_bar{
+	bottom: 0;
+	position:fixed;
+	z-index: 10;
+	height: 60px;
+	width: 100%;
+	background: gray;
+}
+
+/**********************************/
+
 
 /* sinihisaスマホ */
 @media all and (max-width: 480px){
 	/* 画面サイズが480px以下 */
+/*
 	body{
 		background:red;
 	}
-
-/****タブバー***********************/
-	main{
-		padding-bottom: 50px;
-	}
-	.tab_ber{
-		bottom: 0;
-		position:fixed;
-		z-index: 10;
-		height: 60px;
-		width: 100%;
-		background: gray;
-	}
-/**********************************/
+*/
 }
-@media screen and (min-width: 481px) and (max-width:960px){
-	/* 画面サイズが481px～960pxの間 */
+
+@media screen and (min-width: 481px){
+	/* 画面サイズが481px以上 */
+/*
 	body{
 		background:yellow;
+	}
+*/
+
+	.tab_bar{
+		display: none;
 	}
 }

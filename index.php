@@ -17,7 +17,14 @@
 		<meta charset="utf-8">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
+
+		<link rel="stylesheet" href="<?=$path?>content/css/onsenui.min.css">
+		<link rel="stylesheet" href="<?=$path?>content/css/onsen-css-components.min.css">
+
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
+
+		<script src="<?=$path?>content/js/onsenui.min.js"></script>
+		<script src="<?=$path?>content/js/angular-onsenui.min.js"></script>
 	</head>
 
 	<body>
@@ -59,11 +66,10 @@
 						<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
 						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
-
-					<div class="tab_ber">
-						aaaaa
-					</div>
 			</main>
+			<nav class="tab_bar">
+				aaaaa
+			</nav>
 		</div>
 	</body>
 </html>
