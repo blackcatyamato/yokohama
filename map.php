@@ -24,9 +24,9 @@
 
 <form method="GET">
 	<select name="ku">
-		<?php for($i = 1; $i <= $ward_content; $i++): ?>
+		<?php foreach(range(1, $ward_content) as $i): ?>
 			<option><?=$ward_list[$i]?></option>
-		<?php endfor; ?>
+		<?php endforeach; ?>
 	</select>
 	<input type = "submit" value ="送信">
 </form>
@@ -45,16 +45,14 @@ var map;
 var marker = [];
 var infoWindow = [];
 var markerData = [ // マーカーを立てる場所名・緯度・経度
-<?php for($i = 1; $i <= $content; $i++): ?>
-{
-	name: "<?=$name[$i]?>",
-	lat: <?=$lat[$i]?>,
-	lng: <?=$lon[$i]?>,
-	/*icon: 'tam.png' // TAM 東京のマーカーだけイメージを変更する*/
-},
-<?php endfor; ?>
-
-
+	<?php foreach(range(1, $content) as $i): ?>
+		{
+			name: "<?=$name[$i]?>",
+			lat: <?=$lat[$i]?>,
+			lng: <?=$lon[$i]?>,
+			/*icon: 'tam.png' // TAM 東京のマーカーだけイメージを変更する*/
+		},
+	<?php endforeach; ?>
 ];
 
 function initMap() {

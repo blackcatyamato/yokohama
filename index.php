@@ -31,7 +31,7 @@
 					<h4>案内</h4>
 					<ul>
 						<li>
-							<a href="#">
+							<a href="<?=$path?>map.php">
 								<img src="./content/img/tsunami2.png">
 							</a>
 						</li>
@@ -60,6 +60,9 @@
 						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 
+					<div class="tab_ber">
+						aaaaa
+					</div>
 			</main>
 		</div>
 	</body>

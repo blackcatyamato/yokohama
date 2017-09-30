@@ -54,9 +54,10 @@ main{
 	display:-webkit-flex;
 	-webkit-flex-direction:row;
 	-webkit-flex-wrap:wrap;
-	-webkit-justify-content:space-around;
 	height:auto;
+	-webkit-justify-content:space-around;
 	padding-top:50px;
+
 }
 
 h3{
@@ -68,9 +69,7 @@ h3{
 	-webkit-justify-content:center;
 	-webkit-align-items:center;
 	height:100px;
-
 	width:100%;
-
 }
 
 div[class^="box"]{
@@ -136,15 +135,35 @@ li{
 
 }
 
-
+/*
+.tab_ber{
+	display: none;
+}
+*/
 
 /* sinihisaスマホ */
-@media all and (min-width: 480px){
+@media all and (max-width: 480px){
+	/* 画面サイズが480px以下 */
 	body{
 		background:red;
 	}
+
+/****タブバー***********************/
+	main{
+		padding-bottom: 50px;
+	}
+	.tab_ber{
+		bottom: 0;
+		position:fixed;
+		z-index: 10;
+		height: 60px;
+		width: 100%;
+		background: gray;
+	}
+/**********************************/
 }
-@media screen and (max-width:960px){
+@media screen and (min-width: 481px) and (max-width:960px){
+	/* 画面サイズが481px～960pxの間 */
 	body{
 		background:yellow;
 	}
