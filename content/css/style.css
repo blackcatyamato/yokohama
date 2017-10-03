@@ -11,7 +11,13 @@ body{
 	min-height: 100%;
 }
 
-
+.inner{
+	height: 100%;
+	width: 1000px;
+	margin: 0 auto;
+	border-left: 1px black solid;
+	border-right: 1px black solid;
+}
 
 
 header{
@@ -26,44 +32,36 @@ header{
 	width:100%;
 }
 h1{
-	height:auto;
-	width:auto;
-}
 
-footer{
-	border-top:1px solid black;
-	max-height:100px;
-	min-height:50px;
-	width:100%;
 }
 
 
-
+/*===スマホ対応====================*/
 img{
 	max-width: 100%;
 }
+/*================================*/
+
 
 main{
 	display: flex;
 	-webkit-flex-wrap:wrap;
 	-webkit-justify-content:space-around;
 	padding-top:50px;
-
 }
 
 h3{
 	background:#99ff99;
-	display: flex;
-	-webkit-flex-wrap:nowrap;
-	-webkit-justify-content:center;
-	-webkit-align-items:center;
 	height:100px;
+	line-height: 100px;
+	text-align: center;
 	width:100%;
 }
 
 div[class^="box"]{
 	margin:10px 0;
 	width:430px;
+	height: 420px;
 }
 
 /*メニューボックス*/
@@ -121,7 +119,7 @@ li{
 }
 
 
-/****タブバー***********************/
+/*===タブバー====================*/
 main{
 	padding-bottom: 60px;
 }
@@ -134,7 +132,7 @@ main{
 	background: gray;
 }
 
-/**********************************/
+/*================================*/
 
 
 /* sinihisaスマホ */
@@ -155,6 +153,9 @@ main{
 	}
 */
 
+	main{
+		padding-bottom: 0;
+	}
 	.tab_bar{
 		display: none;
 	}
