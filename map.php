@@ -8,16 +8,20 @@
 
 	}
 
-
-
-
-
-
 	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
 	require_once("{$path}content/php/table_select.php");
 
 	$stmt = null;
 	$pdo = null;
+
+	$m_lat = 0;
+	$m_lon = 0;
+	foreach(range(1, $content) as $i):
+		$m_lat += $lat[$i];
+		$m_lon += $lon[$i];
+	endforeach;
+	$m_lat = round($m_lat / $content, 8);
+	$m_lon = round($m_lon / $content, 8);
 ?>
 
 
@@ -59,7 +63,10 @@ function initMap() {
  // 地図の作成
     var mapLatLng = new google.maps.LatLng({lat: markerData[0]["lat"], lng: markerData[0]["lng"]}); // 緯度経度のデータ作成
    map = new google.maps.Map(document.getElementById("map"), { // #sampleに地図を埋め込む
-     center: mapLatLng, // 地図の中心を指定
+     center: { // 地図の中心を指定
+		lat: <?=$m_lat?>,
+		lng: <?=$m_lon?>
+	},
       zoom: 13 // 地図のズームを指定
    });
 

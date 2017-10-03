@@ -9,6 +9,7 @@
 
 	$stmt = null;
 	$pdo = null;
+
 ?>
 
 <!DOCTYPE html>
