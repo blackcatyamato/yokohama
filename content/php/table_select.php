@@ -21,6 +21,9 @@
 		$ward_content++;
 	}
 
+
+
+
 /******************************/
 
 
@@ -47,7 +50,6 @@
 	$i = 1;
 	$content = 0;
 	foreach($stmt as $row){
-
 		$type[$i] = htmlspecialchars($row["Type"]);
 		$definition[$i] = htmlspecialchars($row["Definition"]);
 		$name[$i] = htmlspecialchars($row["Name"]);
@@ -57,9 +59,9 @@
 		$ward[$i] = htmlspecialchars($row["Ward"]);
 		$wardCode[$i] = htmlspecialchars($row["WardCode"]);
 
-
 		$i++;
 		$content++;
 	}
+
 
 ?>
