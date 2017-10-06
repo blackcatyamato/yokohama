@@ -4,8 +4,9 @@
 	$aa = null;
 
 	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
+/*
 	require_once("{$path}content/php/table_select.php");
-
+*/
 
 	$stmt = null;
 	$pdo = null;
@@ -30,7 +31,7 @@
 				</div>
 			</header>
 			<main>
-				<h3>まずは落ち着きましょう…</h3>
+				<h3><marquee>まずは落ち着きましょう…</marquee></h3>
 				<div class="inner">
 					<div class="box_menu">
 						<h4>案内</h4>

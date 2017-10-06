@@ -6,7 +6,7 @@
 					Ward,
 					WardCode
 				FROM
-					hinanjo
+					shelter_jp
 				GROUP BY
 					Ward
 				ORDER BY
@@ -39,7 +39,7 @@
 					Ward,
 					WardCode
 				FROM
-					hinanjo
+					shelter_jp
 				WHERE
 					Type LIKE '%' AND
 					Ward LIKE ?
