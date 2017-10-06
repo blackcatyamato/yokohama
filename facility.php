@@ -14,12 +14,12 @@
 		print("<title>".$name."-Yokohama Disaster Prevention</title>");
 ?>
 	</head>
-	<body>
 		<header>
 			<h1>
 				YDP
 			</h1>
 		</header>
+	<body>
 		<main>
 			<?php
 				//include "./print_facility_more.php";
