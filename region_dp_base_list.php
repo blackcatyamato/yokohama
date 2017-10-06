@@ -17,7 +17,7 @@
 		<main id="0">
 			<div class="base_list">
 				<h2>
-					地域防災拠点一覧
+					地域防災拠点一覧&nbspDisaster&nbspPrevention&nbspBase
 				</h2>
 				<div class="ward_link">
 				<ul>
@@ -43,7 +43,7 @@
 				</div>
 				<div class="print">
 				<?php
-					include "print_1.php";
+					include "print_1_base.php";
 				 ?>
 				</div>
 			</div>
