@@ -14,8 +14,7 @@
 				YDP
 			</h1>
 		</header>
-		<main>
-			<div id="#0"></div>
+		<main id="0">
 			<div class="base_list">
 				<h2>
 					地域防災拠点一覧

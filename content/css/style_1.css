@@ -90,12 +90,14 @@ body{
   font-size:150%;
   background:white;
   width:100%;
+  padding-left: 1vw;
 }
 .print a .base_address{
   border-top:1px dotted black;
   font-size:100%;
   background:white;
   width:100%;
+  padding-left: 1vw;
 }
 
 .return{

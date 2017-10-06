@@ -36,7 +36,7 @@
 <?php
 	}
      if($i==18){
-    	   print("</ul><div class=\"return\"><a href=\"#0\">ページ上へ</a></div></div>");
+    	   print('</ul><div class="return"><a href="#0">ページ上へ</a></div></div>');
       }
     }
 
