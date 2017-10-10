@@ -28,7 +28,7 @@
        <ul>
 		<?php } ?>
 		<li>
-			<a href="#">
+			<a href="facility.php?name=<?=$result["Name"]?>">
 				<div class="base_name"><?=$result["Name"]?></div>
 				<div class="base_address">住所:<?=$result["Address"]?></div>
 			</a>

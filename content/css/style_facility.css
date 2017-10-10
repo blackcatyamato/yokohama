@@ -5,7 +5,22 @@ main{
   align-items: center;
 }
 body{
-  background:#99FFAF;
+  background:#99FFAF url("../img/022Yamasha17103_TP_V.jpg");
   height:auto;
-  border:1px solid red;
+}
+/*施設詳細情報*/
+.ft_box{
+  min-width:580px;
+  width:65%;
+  background:rgba(255,255,255,0.7);
+  border-radius:20px/20px;
+  box-shadow:1px 1px 3px rgba(0,0,0,0.5);
+}
+.ft_box h3{
+  background:blue;
+  border:2px solid darkblue;
+  border-radius:20px/20px;
+  color:white;
+  padding-left:10px;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.5)inset;
 }
