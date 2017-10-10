@@ -11,7 +11,7 @@
 
     /*区ごとに防災拠点を出力*/
     for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"地域防災拠点\" AND WardCode=".$i;
+      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"".$type."\" AND WardCode=".$i;
 		  $stmt = $dbh->query($sql);
       if($i>=2){
         print("</ul>");

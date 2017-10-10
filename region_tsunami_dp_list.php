@@ -2,10 +2,11 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_1.css">
-		<title>津波避難施設-Yokohama Disaster Prevention</title>
+		<title>津波避難所-Yokohama Disaster Prevention</title>
 	</head>
 	<body>
 		<header>
@@ -16,7 +17,7 @@
 		<main id="0">
 			<div class="base_list">
 				<h2>
-					津波避難施設&nbspTsunami&nbspShelter
+					<span style="margin-right:20px;">津波避難施設一覧</span><span>Tsunami&nbspshelter</span>
 				</h2>
 				<div class="ward_link">
 				<ul>
@@ -42,7 +43,8 @@
 				</div>
 				<div class="print">
 				<?php
-					include "print_1_tsunami.php";
+					$type = "津波避難施設";
+					include "print_1_base.php";
 				 ?>
 				</div>
 			</div>

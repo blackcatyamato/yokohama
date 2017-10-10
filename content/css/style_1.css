@@ -4,7 +4,8 @@ main{
   align-items: center;
 }
 body{
-  background:#99FFAF;
+  background:#99FFAF url("../img/022Yamasha17103_TP_V.jpg");
+  background-attachment: fixed;
   height:auto;
 }
 h2{
@@ -42,7 +43,7 @@ margin-bottom:1vh;
 /*施設情報*/
 .base_list{
   margin-top:12vh;
-  background:royalblue;
+  background:rgba(255,255,255,0.7);
   min-width:580px;
   width:65%;
   height:auto;
@@ -57,7 +58,7 @@ margin-bottom:1vh;
   padding-left: 1vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  background:blue;
+  background:rgba(0,0,255,1);
   font-size:200%;
   color:white;
   border-radius:20px/20px;
@@ -76,6 +77,7 @@ margin-bottom:1vh;
   box-shadow:0px 1px 1px rgba(0,0,0,0.5);
 }
 .ward_box{
+  background:royalblue;
   border:1px solid white;
   margin: 1%;
   margin-bottom:4%;
