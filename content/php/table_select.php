@@ -43,7 +43,6 @@
 	$content = 0;
 	foreach($stmt as $row){
 		$name[$i] = htmlspecialchars($row["Name"]);
-		$definition[$i] = htmlspecialchars($row["Definition"]);
 		$address[$i] = htmlspecialchars($row["Address"]);
 		$ward[$i] = htmlspecialchars($row["Ward"]);
 
@@ -52,6 +51,3 @@
 	}
 
 /******************************/
-
-
-?>
