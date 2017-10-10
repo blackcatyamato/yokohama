@@ -7,6 +7,29 @@ body{
   background:#99FFAF;
   height:auto;
 }
+h2{
+  color:red;
+}
+
+/*区リンク*/
+.base_list .ward_link ul{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.base_list .ward_link li{
+margin-left:10px;
+  width:auto;
+  height:auto;
+  padding:2px;
+  background:white;
+}
+.base_list .ward_link a{
+  display:flex;
+}
+
+/*施設情報*/
 .base_list{
   margin-top:12vh;
   background:royalblue;
