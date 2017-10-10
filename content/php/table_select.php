@@ -36,7 +36,7 @@
 				WHERE
 					Ward LIKE ?
 			");
-	$stmt->bindValue(1, $aa, PDO::PARAM_STR);
+	$stmt->bindValue(1, $ku, PDO::PARAM_STR);
 	$stmt->execute();
 
 	$i = 1;

@@ -1,11 +1,14 @@
 <?php
 	$path = "";
 
-	$aa = "鶴見区";
+	$lang = "jp";
+	$ku = "鶴見区";
 
+	if(isset($_GET["lang"])){
+		$lang = $_GET["lang"];
+	}
 	if(isset($_GET["ku"])){
-		$aa = $_GET["ku"];
-
+		$ku = $_GET["ku"];
 	}
 
 	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
@@ -19,7 +22,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>aa</title>
+	<title>マップ</title>
 	<style>
 		#map{
 			width: 600px;
@@ -32,6 +35,10 @@
 
 <body>
 	<form method="GET">
+		<select name="lang">
+				<option value ="jp">日本語</option>
+				<option value ="en">English</option>
+		</select>
 		<select name="ku">
 			<?php foreach(range(1, $ward_content) as $i): ?>
 				<option><?=$ward_list[$i]?></option>
@@ -49,7 +56,7 @@
 			var bounds = new google.maps.LatLngBounds();
 			var addresses = [
 				<?php foreach(range(1, $content) as $i): ?>
-					<?="'{$ward[$i]}{$address[$i]}'"?>,
+					<?="'{$ward[$i]} {$address[$i]}'"?>,
 				<?php endforeach; ?>
 			];
 
