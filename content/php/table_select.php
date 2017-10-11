@@ -6,19 +6,19 @@
 					Ward,
 					WardCode
 				FROM
-					shelter_jp
+					shelter_{$lang}
 				GROUP BY
 					Ward
 				ORDER BY
 					WardCode ASC
 			");
 	$i = 1;
-	$ward_content = 0;
+	$ward_count = 0;
 	foreach($stmt as $row){
 		$ward_list[$i] = htmlspecialchars($row["Ward"]);
 
 		$i++;
-		$ward_content++;
+		$ward_count++;
 	}
 
 /******************************/
@@ -32,7 +32,7 @@
 					Address,
 					Ward
 				FROM
-					shelter_jp
+					shelter_{$lang}
 				WHERE
 					Ward LIKE ?
 			");

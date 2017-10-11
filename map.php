@@ -41,7 +41,7 @@
 				<option value ="en">English</option>
 		</select>
 		<select name="ku">
-			<?php foreach(range(1, $ward_content) as $i): ?>
+			<?php foreach(range(1, $ward_count) as $i): ?>
 				<option value="<?=$ward_list[$i]?>"><?=$ward_list[$i]?></option>
 			<?php endforeach; ?>
 		</select>
@@ -56,7 +56,7 @@
 			var geocoder = new google.maps.Geocoder();
 			var bounds = new google.maps.LatLngBounds();
 			var addresses = [
-				<?php foreach(range(1, $content) as $i): ?>
+				<?php foreach(range(1, $count) as $i): ?>
 					<?="'{$ward[$i]} {$address[$i]}'"?>,
 				<?php endforeach; ?>
 			];
@@ -106,13 +106,6 @@
 			});
 		});
 	</script>
-
-
-
-
-
-
-
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
 
