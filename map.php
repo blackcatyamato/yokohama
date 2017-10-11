@@ -1,6 +1,7 @@
 <?php
 	$path = "";
 
+
 	$lang = "jp";
 	$ku = "鶴見区";
 
