@@ -41,7 +41,7 @@
 		</select>
 		<select name="ku">
 			<?php foreach(range(1, $ward_content) as $i): ?>
-				<option><?=$ward_list[$i]?></option>
+				<option value="<?=$ward_list[$i]?>"><?=$ward_list[$i]?></option>
 			<?php endforeach; ?>
 		</select>
 		<input type = "submit" value ="送信">

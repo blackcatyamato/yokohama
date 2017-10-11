@@ -1,6 +1,7 @@
 <?php
 	$path = "";
 
+	$lang = "jp";
 	$aa = null;
 
 	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
