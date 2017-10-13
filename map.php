@@ -1,7 +1,6 @@
 <?php
 	$path = "";
 
-
 	$lang = "jp";
 	$ku = "鶴見区";
 
@@ -30,18 +29,23 @@
 			height: 600px;
 		}
 	</style>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
 
 </head>
 
 <body>
+
+
 	<form method="GET">
+
 		<select name="lang">
 				<option value ="jp">日本語</option>
 				<option value ="en">English</option>
 		</select>
+		<input type = "submit" value ="送信">
+
 		<select name="ku">
-			<?php foreach(range(1, $ward_content) as $i): ?>
+			<?php foreach(range(1, $ward_count) as $i): ?>
 				<option value="<?=$ward_list[$i]?>"><?=$ward_list[$i]?></option>
 			<?php endforeach; ?>
 		</select>
@@ -49,14 +53,15 @@
 	</form>
 
 	<div id="map"></div>
+S
 
 	<script>
 		$(function(){
 			var map = new google.maps.Map(document.getElementById('map'));
 			var geocoder = new google.maps.Geocoder();
 			var bounds = new google.maps.LatLngBounds();
-			var addresses = [
-				<?php foreach(range(1, $content) as $i): ?>
+			var addresses = [ //$count
+				<?php foreach(range(1, $count) as $i): ?>
 					<?="'{$ward[$i]} {$address[$i]}'"?>,
 				<?php endforeach; ?>
 			];
