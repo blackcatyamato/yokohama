@@ -1,44 +1,39 @@
 <?php
-    $path="";
-	$aa = null;
-    $dbh = new PDO("sqlite:{$path}content/db/sqlite.db");
+if(file_exists('./content/xml/TsunamiEvacuationFacilityList.xml')){
+  $xml = simplexml_load_file('./content/xml/TsunamiEvacuationFacilityList.xml');
 
-    /*区の数の算出*/
-    $sql = "SELECT MAX(WardCode) as wardnumber FROM hinanjo";
-		$stmt = $dbh->query($sql);
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    $wardnumber = $result["wardnumber"];
+  /*登録データの数*/
+  $efnumber = count($xml->TsunamiEvacuationFacility);
+  /*区の数の算出*/
+  $wardnumber=1;//少なくとも1区はあることとする
 
-    /*区ごとに防災拠点を出力*/
-    for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"地域防災拠点\" AND WardCode=".$i;
-		  $stmt = $dbh->query($sql);
-      if($i>=2){
-        print("</ul>");
-      }
-      $j=0;
-      while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $j++;
-        if($j==1){
-?>
-		<?php if($i>=2){ ?>
-		</ul><div class="return"><a href="#0">ページ上へ</a></div></div>
-		<?php } ?>
-		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><?=$result["Ward"]?><a href="map.php?ku=<?=$result['Ward']?>">→マップから探す</a></h3>
-       <ul>
-		<?php } ?>
-		<li>
-			<a href="facility.php?name=<?=$result["Name"]?>">
-				<div class="base_name"><?=$result["Name"]?></div>
-				<div class="base_address">住所:<?=$result["Address"]?></div>
-			</a>
-		</li>
-<?php
-	}
-     if($i==18){
-    	   print('</ul><div class="return"><a href="#0">ページ上へ</a></div></div>');
+  for($i = 0;$i < $efnumber ;$i++){
+    $now_ward = (string)($xml->TsunamiEvacuationFacility[$i]->Ward);
+    if($i==0){
+      echo '<div class="ward_box"><h3 id="'.($i+1).'">'.$xml->TsunamiEvacuationFacility[$i]->Ward.'<a href="map.php?ku='.$xml->TsunamiEvacuationFacility[$i]->Ward.'">→マップから探す</a></h3>
+         <ul>';
+    }
+    if($i>=1){
+      $mae_ward = (string)($xml->TsunamiEvacuationFacility[$i-1]->Ward);
+      if($mae_ward != $now_ward){
+        echo '</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>';
+        echo '<div class="ward_box"><h3 id="'.($i+1).'">'.$xml->TsunamiEvacuationFacility[$i]->Ward.'<a href="map.php?ku='.$xml->TsunamiEvacuationFacility[$i]->Ward.'">→マップから探す</a></h3>
+             <ul>';
       }
     }
-
-$dbh = null;
+    echo '<li>';
+    echo '<a href="facility.php?name="'.$xml->TsunamiEvacuationFacility[$i]->Name.'">';
+    echo '<div class="base_name">'.$xml->TsunamiEvacuationFacility[$i]->Name.'</div>';
+    echo '<div class="base_address">住所:'.(string)$xml->TsunamiEvacuationFacility[$i]->Address.'</div>';
+    echo '</a></li>';
+    /*if($mae_ward != $now_ward){
+      $wardnumber++;
+    }*/
+  }
+  echo '</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>';
+  echo '<p style="background:yellow;">'.$wardnumber.'</p>';
+  echo '<p style="background:yellow;">'.$efnumber.'</p>';
+}else{
+  exit('Failed to open TsunamiEvacuationFacilityList.xml');
+}
 ?>

@@ -44,7 +44,7 @@
 				<div class="print">
 				<?php
 					$type = "津波避難施設";
-					include "print_1_base.php";
+					include "print_1_tsunami.php";
 				 ?>
 				</div>
 			</div>

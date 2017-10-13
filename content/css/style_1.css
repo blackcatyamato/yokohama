@@ -55,15 +55,10 @@ margin-bottom:1vh;
   flex-wrap: wrap;
   justify-content:flex-start;
   width:calc(100%-1vw);
-  padding-left: 1vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  background:rgba(0,0,255,1);
+  margin: 1vh;
   font-size:200%;
-  color:white;
-  border:2px solid darkblue;
-  border-radius:20px/20px;
-  box-shadow:2px 2px 5px rgba(0,0,0,0.5)inset;
+  color:black;
+  border-bottom:2px solid royalblue;
 }
 .base_list h3{
   margin-top:10px;
