@@ -46,6 +46,7 @@
 		$address[$i] = htmlspecialchars($row["Address"]);
 		$ward[$i] = htmlspecialchars($row["Ward"]);
 
+
 		$i++;
 		$count++;
 	}

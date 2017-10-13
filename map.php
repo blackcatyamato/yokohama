@@ -96,9 +96,15 @@ if($val1 != null){
 			var map = new google.maps.Map(document.getElementById('map'));
 			var geocoder = new google.maps.Geocoder();
 			var bounds = new google.maps.LatLngBounds();
+<<<<<<< HEAD
 			var addresses = [//$count
 				<?php foreach(range(1, $count) as $i): ?>
 					<?="'{$ward[$i]} {$address[$i]} {$name[$i]}'"?>,
+=======
+			var addresses = [
+				<?php foreach(range(1, $count) as $i): ?>
+					<?="'{$ward[$i]} {$address[$i]}'"?>,
+>>>>>>> 99f7a760f7d26e73396b8bb9080443fbeebe395a
 				<?php endforeach; ?>
 			];
 
@@ -147,13 +153,6 @@ if($val1 != null){
 			});
 		});
 	</script>
-
-
-
-
-
-
-
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
 
