@@ -11,7 +11,7 @@
 
     /*区ごとに防災拠点を出力*/
     for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"".$type."\" AND WardCode=".$i;
+      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"地域防災拠点\" AND WardCode=".$i;
 		  $stmt = $dbh->query($sql);
       if($i>=2){
         print("</ul>");
@@ -22,13 +22,13 @@
         if($j==1){
 ?>
 		<?php if($i>=2){ ?>
-		</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>
+		</ul><div class="return"><a href="#0">ページ上へ</a></div></div>
 		<?php } ?>
 		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><?=$result["Ward"]?><a href="map.php?ku=<?=$result['Ward']?>">→マップから探す</a></h3>
        <ul>
 		<?php } ?>
 		<li>
-			<a href="facility.php?name=<?=$result["Name"]?>">
+			<a href="#">
 				<div class="base_name"><?=$result["Name"]?></div>
 				<div class="base_address">住所:<?=$result["Address"]?></div>
 			</a>
@@ -36,7 +36,7 @@
 <?php
 	}
      if($i==18){
-    	   print('</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>');
+    	   print("</ul><div class=\"return\"><a href=\"#0\">ページ上へ</a></div></div>");
       }
     }
 
