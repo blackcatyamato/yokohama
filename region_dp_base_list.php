@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=640,initial-scale=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_1.css">
@@ -17,7 +17,7 @@
 		<main id="0">
 			<div class="base_list">
 				<h2>
-					地域防災拠点一覧&nbspDisaster&nbspPrevention&nbspBase
+					<span style="margin-right:20px;">地域防災拠点一覧</span><span>Disaster&nbspPrevention&nbspBase</span>
 				</h2>
 				<div class="ward_link">
 				<ul>
@@ -43,6 +43,7 @@
 				</div>
 				<div class="print">
 				<?php
+					$definition = "地域防災拠点";
 					include "print_1_base.php";
 				 ?>
 				</div>

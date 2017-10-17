@@ -1,44 +1,20 @@
 <?php
-    $path="";
-	$aa = null;
-    $dbh = new PDO("sqlite:{$path}content/db/sqlite.db");
+if(file_exists('./content/xml/TsunamiEvacuationFacilityList.xml')){
+  $xml = simplexml_load_file('./content/xml/TsunamiEvacuationFacilityList.xml');
 
-    /*区の数の算出*/
-    $sql = "SELECT MAX(WardCode) as wardnumber FROM hinanjo";
-		$stmt = $dbh->query($sql);
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    $wardnumber = $result["wardnumber"];
-
-    /*区ごとに防災拠点を出力*/
-    for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"地域防災拠点\" AND WardCode=".$i;
-		  $stmt = $dbh->query($sql);
-      if($i>=2){
-        print("</ul>");
-      }
-      $j=0;
-      while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $j++;
-        if($j==1){
-?>
-		<?php if($i>=2){ ?>
-		</ul><div class="return"><a href="#0">ページ上へ</a></div></div>
-		<?php } ?>
-		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><?=$result["Ward"]?><a href="map.php?ku=<?=$result['Ward']?>">→マップから探す</a></h3>
-       <ul>
-		<?php } ?>
-		<li>
-			<a href="facility.php?name=<?=$result["Name"]?>">
-				<div class="base_name"><?=$result["Name"]?></div>
-				<div class="base_address">住所:<?=$result["Address"]?></div>
-			</a>
-		</li>
-<?php
-	}
-     if($i==18){
-    	   print('</ul><div class="return"><a href="#0">ページ上へ</a></div></div>');
-      }
-    }
-
-$dbh = null;
+  /*登録データの数*/
+  $efnumber = count($xml->TsunamiEvacuationFacility);
+  echo '<div class="ward_box"></h3>
+     <ul>';
+  for($i = 0;$i < $efnumber ;$i++){
+    echo '<li>';
+    echo '<a href="facility.php?name="'.$xml->TsunamiEvacuationFacility[$i]->Name.'">';
+    echo '<div class="base_name">'.$xml->TsunamiEvacuationFacility[$i]->Name.'</div>';
+    echo '<div class="base_address">住所:神奈川県横浜市'.(string)$xml->TsunamiEvacuationFacility[$i]->Ward.(string)$xml->TsunamiEvacuationFacility[$i]->Address.'</div>';
+    echo '</a></li>';
+  }
+  echo '</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>';
+}else{
+  exit('Failed to open TsunamiEvacuationFacilityList.xml');
+}
 ?>

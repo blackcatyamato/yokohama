@@ -1,13 +1,38 @@
 <?php
 	$path = "";
-
-
 	$lang = "jp";
 	$ku = "鶴見区";
 
-	if(isset($_GET["lang"])){
-		$lang = $_GET["lang"];
+
+
+/***********************************************/
+$val1 = null;
+$timeout = time() + 1000 * 86400; //現在の時刻 + 1000日 * (24時間 * 60分 * 60秒)
+
+if(isset($_POST["lang"])){
+	$val1 = $_POST["lang"];
+}
+
+if($val1 != null){
+
+	setcookie("langCookie", $val1, $timeout, "/", "");
+	setcookie("langCookie", $val1);
+
+	header("Location: " . $_SERVER['PHP_SELF']);
+
+	if(isset($_COOKIE["langCookie"])){
+		$lang = $_COOKIE["langCookie"];
 	}
+
+}else{
+	if(isset($_COOKIE["langCookie"])){
+		$lang = $_COOKIE["langCookie"];
+	}
+}
+
+/************************************************/
+
+
 	if(isset($_GET["ku"])){
 		$ku = $_GET["ku"];
 	}
@@ -35,11 +60,17 @@
 </head>
 
 <body>
-	<form method="GET">
+
+
+	<form method="POST">
 		<select name="lang">
 				<option value ="jp">日本語</option>
 				<option value ="en">English</option>
 		</select>
+		<input type = "submit" value ="送信">
+	</form>
+
+	<form method="GET">
 		<select name="ku">
 			<?php foreach(range(1, $ward_count) as $i): ?>
 				<option value="<?=$ward_list[$i]?>"><?=$ward_list[$i]?></option>
@@ -50,14 +81,18 @@
 
 	<div id="map"></div>
 
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
+
+
 	<script>
 		$(function(){
 			var map = new google.maps.Map(document.getElementById('map'));
 			var geocoder = new google.maps.Geocoder();
 			var bounds = new google.maps.LatLngBounds();
-			var addresses = [
+			var addresses = [//$count
 				<?php foreach(range(1, $count) as $i): ?>
-					<?="'{$ward[$i]} {$address[$i]}'"?>,
+					<?="'神奈川県 {$ward[$i]} {$name[$i]}'"?>,
 				<?php endforeach; ?>
 			];
 
@@ -107,7 +142,6 @@
 		});
 	</script>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
 
 </body>
 

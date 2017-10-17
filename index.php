@@ -1,14 +1,6 @@
 <?php
 	$path = "";
 
-	$lang = "jp";
-	$aa = null;
-
-	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
-/*
-	require_once("{$path}content/php/table_select.php");
-*/
-
 	$stmt = null;
 	$pdo = null;
 
