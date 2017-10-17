@@ -4,14 +4,14 @@
     $dbh = new PDO("sqlite:{$path}content/db/sqlite.db");
 
     /*区の数の算出*/
-    $sql = "SELECT MAX(WardCode) as wardnumber FROM hinanjo";
+    $sql = "SELECT MAX(WardCode) as wardnumber FROM shelter_jp";
 		$stmt = $dbh->query($sql);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $wardnumber = $result["wardnumber"];
 
     /*区ごとに防災拠点を出力*/
     for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"".$type."\" AND WardCode=".$i;
+      $sql = "SELECT Name,Address,Ward,WardCode FROM shelter_jp WHERE Definition = \"".$definition."\" AND WardCode=".$i;
 		  $stmt = $dbh->query($sql);
       if($i>=2){
         print("</ul>");

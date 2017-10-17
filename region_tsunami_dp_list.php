@@ -43,8 +43,8 @@
 				</div>
 				<div class="print">
 				<?php
-					$type = "津波避難施設";
-					include "print_1_tsunami.php";
+					$definition = "津波避難施設";
+					include "print_1_base.php";
 				 ?>
 				</div>
 			</div>

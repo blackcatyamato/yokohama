@@ -43,7 +43,7 @@
 				</div>
 				<div class="print">
 				<?php
-					$type = "地域防災拠点";
+					$definition = "地域防災拠点";
 					include "print_1_base.php";
 				 ?>
 				</div>
