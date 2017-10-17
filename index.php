@@ -32,9 +32,11 @@
 				</div>
 			</header>
 			<main>
-				<h3><marquee>まずは落ち着きましょう…</marquee></h3>
+				<h2>
+					<marquee>まずは落ち着きましょう…</marquee>
+				</h2>
 				<div class="panel-heading">
-					<h2 class="panel-title"><a name="warn"></a>横浜市域の警報・注意報</h2>
+					<h3 class="panel-title"><a name="warn"></a>横浜市域の警報・注意報</h3>
 				</div>
 				<div class="panel-body">
 					<div id="warning2"></div>
