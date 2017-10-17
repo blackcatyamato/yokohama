@@ -63,8 +63,8 @@ if(file_exists('./content/xml/TsunamiEvacuationFacilityList.xml')){
         $wc=18;
         break;
     }
-    $sql = 'INSERT INTO test_hinanjo(Type,Name,Address,Ward,WardCode)
-    VALUES("津波避難所","'.$value->Name.'","'.$value->Address.'","'.$value->Ward.'","'.$wc.'")';
+    $sql = 'INSERT INTO shelter_jp(Name,Definition,Address,Ward,WardCode)
+    VALUES("'.$value->Name.'","津波避難施設","'.$value->Address.'","'.$value->Ward.'","'.$wc.'")';
     $stmt = $dbh->query($sql);
   }
 }else{
