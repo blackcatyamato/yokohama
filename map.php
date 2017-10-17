@@ -82,6 +82,9 @@ if($val1 != null){
 	<div id="map"></div>
 
 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
+
+
 	<script>
 		$(function(){
 			var map = new google.maps.Map(document.getElementById('map'));
@@ -89,7 +92,7 @@ if($val1 != null){
 			var bounds = new google.maps.LatLngBounds();
 			var addresses = [//$count
 				<?php foreach(range(1, $count) as $i): ?>
-					<?="'{$ward[$i]} {$name[$i]}'"?>,
+					<?="'神奈川県 {$ward[$i]} {$name[$i]}'"?>,
 				<?php endforeach; ?>
 			];
 
@@ -138,24 +141,6 @@ if($val1 != null){
 			});
 		});
 	</script>
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
-
-
-<?php
-
-
-$a = array(12.2,24.4,36.6,48.8);
-$b = 25;
-
-# $bより大きいものだけを抽出
-$c = array_filter($a, function($x) use($b) { return ($x > $b); });
-# 抽出したもののなかから、最小値を抽出
-$c = min($c);
-print($c);
-
-
-?>
 
 
 </body>
