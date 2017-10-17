@@ -78,7 +78,7 @@ if($val1 != null){
 		</select>
 		<input type = "submit" value ="送信">
 	</form>
-
+<?=$count?>
 	<div id="map"></div>
 
 
@@ -87,6 +87,8 @@ if($val1 != null){
 
 	<script>
 		$(function(){
+
+
 			var map = new google.maps.Map(document.getElementById('map'));
 			var geocoder = new google.maps.Geocoder();
 			var bounds = new google.maps.LatLngBounds();
@@ -95,7 +97,6 @@ if($val1 != null){
 					<?="'神奈川県 {$ward[$i]} {$name[$i]}'"?>,
 				<?php endforeach; ?>
 			];
-
 			addresses.map(function(address, i){
 				geocoder.geocode(
 					{
@@ -103,12 +104,11 @@ if($val1 != null){
 						"region": "jp"
 					},
 					function(results, status){
-
 						// マーカーの表示
 						var position = results[0].geometry.location;
 						var marker = new google.maps.Marker({
 							position: position,
-							map: map
+							map: map,
 						});
 
 						// 情報ウィンドウの表示
@@ -135,10 +135,10 @@ if($val1 != null){
 
 						// 住所が1つの場合、寄り過ぎるので zoom を調整
 						if(addresses.length === 1) map.setZoom(18);
-
 					}
 				);
 			});
+
 		});
 	</script>
 
