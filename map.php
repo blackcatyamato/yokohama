@@ -1,11 +1,40 @@
 <?php
 	$path = "";
+	$lang = "jp";
+	$ku = "鶴見区";
 
-	$aa = "鶴見区";
+
+
+/***********************************************/
+$val1 = null;
+$timeout = time() + 1000 * 86400; //現在の時刻 + 1000日 * (24時間 * 60分 * 60秒)
+
+if(isset($_POST["lang"])){
+	$val1 = $_POST["lang"];
+}
+
+if($val1 != null){
+
+	setcookie("langCookie", $val1, $timeout, "/", "");
+	setcookie("langCookie", $val1);
+
+	header("Location: " . $_SERVER['PHP_SELF']);
+
+	if(isset($_COOKIE["langCookie"])){
+		$lang = $_COOKIE["langCookie"];
+	}
+
+}else{
+	if(isset($_COOKIE["langCookie"])){
+		$lang = $_COOKIE["langCookie"];
+	}
+}
+
+/************************************************/
+
 
 	if(isset($_GET["ku"])){
-		$aa = $_GET["ku"];
-
+		$ku = $_GET["ku"];
 	}
 
 	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
@@ -13,98 +42,122 @@
 
 	$stmt = null;
 	$pdo = null;
-
-	$m_lat = 0;
-	$m_lon = 0;
-	foreach(range(1, $count) as $i):
-		$m_lat += $lat[$i];//鬼畜野郎め！
-		$m_lon += $lon[$i];//鬼畜野郎め！
-	endforeach;
-	$m_lat = round($m_lat / $count, 8);
-	$m_lon = round($m_lon / $count, 8);
-	$ward_content = 0;
-	$ward_list = 5;
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>あああ</title>
-	</head>
-	<body>
-		<form method="GET">
-			<select name="ku">
-				<?php foreach(range(1, $ward_content) as $i): ?>
-					<option><?=$ward_list[$i]?></option>
-				<?php endforeach; ?>
-			</select>
-			<input type = "submit" value ="送信">
-		</form>
 
-		<div id="map"></div>
+<head>
+	<meta charset="utf-8">
+	<title>マップ</title>
+	<style>
+		#map{
+			width: 600px;
+			height: 600px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
-		<style>
-			#map{
-				width: 600px;
-				height: 600px;
-			}
-		</style>
+</head>
 
-		<script>
-		var map;
-		var marker = [];
-		var infoWindow = [];
-		var markerData = [ // マーカーを立てる場所名・緯度・経度
-			<?php foreach(range(1, $count) as $i): ?>
-				{
-					name: "<?=$name[$i]?>",
-					lat: <?=$lat[$i]?>,
-					lng: <?=$lon[$i]?>,
-					/*icon: 'tam.png' // TAM 東京のマーカーだけイメージを変更する*/
-				},
+<body>
+
+
+	<form method="POST">
+		<select name="lang">
+				<option value ="jp">日本語</option>
+				<option value ="en">English</option>
+		</select>
+		<input type = "submit" value ="送信">
+	</form>
+
+	<form method="GET">
+		<select name="ku">
+			<?php foreach(range(1, $ward_count) as $i): ?>
+				<option value="<?=$ward_list[$i]?>"><?=$ward_list[$i]?></option>
 			<?php endforeach; ?>
-		];
+		</select>
+		<input type = "submit" value ="送信">
+	</form>
 
-		function initMap() {
-		 // 地図の作成
-		    var mapLatLng = new google.maps.LatLng({lat: markerData[0]["lat"], lng: markerData[0]["lng"]}); // 緯度経度のデータ作成
-		   map = new google.maps.Map(document.getElementById("map"), { // #sampleに地図を埋め込む
-		     center: { // 地図の中心を指定
-				lat: <?=$m_lat?>,
-				lng: <?=$m_lon?>
-			},
-		      zoom: 13 // 地図のズームを指定
-		   });
+	<div id="map"></div>
 
-		 // マーカー毎の処理
-		 for (var i = 0; i < markerData.length; i++) {
-		        markerLatLng = new google.maps.LatLng({lat: markerData[i]["lat"], lng: markerData[i]["lng"]}); // 緯度経度のデータ作成
-		        marker[i] = new google.maps.Marker({ // マーカーの追加
-		         position: markerLatLng, // マーカーを立てる位置を指定
-		            map: map // マーカーを立てる地図を指定
-		       });
 
-		     infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
-		         content: '<div class="sample">' + markerData[i]["name"] + "</div>" // 吹き出しに表示する内容
-		       });
+	<script>
+		$(function(){
+			var map = new google.maps.Map(document.getElementById('map'));
+			var geocoder = new google.maps.Geocoder();
+			var bounds = new google.maps.LatLngBounds();
+			var addresses = [//$count
+				<?php foreach(range(1, $count) as $i): ?>
+					<?="'{$ward[$i]} {$name[$i]}'"?>,
+				<?php endforeach; ?>
+			];
 
-		     markerEvent(i); // マーカーにクリックイベントを追加
-		 }
+			addresses.map(function(address, i){
+				geocoder.geocode(
+					{
+						"address" : address,
+						"region": "jp"
+					},
+					function(results, status){
 
-		   marker[0].setOptions({// TAM 東京のマーカーのオプション設定
-		        icon: {
-		         url: markerData[0]["icon"]// マーカーの画像を変更
-		       }
-		   });
-		}
+						// マーカーの表示
+						var position = results[0].geometry.location;
+						var marker = new google.maps.Marker({
+							position: position,
+							map: map
+						});
 
-		// マーカーにクリックイベントを追加
-		function markerEvent(i) {
-		    marker[i].addListener("click", function() { // マーカーをクリックしたとき
-		      infoWindow[i].open(map, marker[i]); // 吹き出しの表示
-		  });
-		}
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA&callback=initMap"></script>
-	</body>
+						// 情報ウィンドウの表示
+						var content = results[0].formatted_address;
+						var infoWindow = new google.maps.InfoWindow({
+							content: content,
+							position: position,
+							size: new google.maps.Size(50,50)
+						});
+
+						// マーカーにマウスを乗せた時に情報ウィンドウを表示
+						google.maps.event.addListener(marker, 'mouseover', function(){
+							infoWindow.open(map, marker);
+						});
+
+						// マーカーからマウスが離れた時に情報ウィンドウを非表示
+						google.maps.event.addListener(marker, 'mouseout', function(){
+							infoWindow.close(map, marker);
+						});
+
+						// マーカーが地図の中にいい感じに収まるようにする
+						bounds.extend(position);
+						map.fitBounds(bounds);
+
+						// 住所が1つの場合、寄り過ぎるので zoom を調整
+						if(addresses.length === 1) map.setZoom(18);
+
+					}
+				);
+			});
+		});
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
+
+
+<?php
+
+
+$a = array(12.2,24.4,36.6,48.8);
+$b = 25;
+
+# $bより大きいものだけを抽出
+$c = array_filter($a, function($x) use($b) { return ($x > $b); });
+# 抽出したもののなかから、最小値を抽出
+$c = min($c);
+print($c);
+
+
+?>
+
+
+</body>
+
 </html>
