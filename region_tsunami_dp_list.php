@@ -10,9 +10,10 @@
 	</head>
 	<body>
 		<header>
-			<h1>
-				YDP
-			</h1>
+			<?php
+				$page = "津波避難施設";
+				include "./header.php";
+			?>
 		</header>
 		<main id="0">
 			<div class="base_list">
