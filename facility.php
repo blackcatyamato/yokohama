@@ -1,6 +1,6 @@
 <?php
 	if($_GET){
-		$name = $_GET["name"];
+		$id = $_GET["id"];
 	}
 ?>
 <!DOCTYPE html>
@@ -21,12 +21,12 @@
 			</h1>
 		</header>
 	<body>
-		<main>﻿
+		<main>?
 			<?php
 			$path="";
 			$dbh = new PDO("sqlite:{$path}content/db/sqlite.db");
 			try{
-				$sql = "SELECT Name,Address,Ward,WardCode FROM hinanjo WHERE Type = \"地域防災拠点\" AND Name=\"".$name."\"";
+				$sql = "SELECT Name,Address,Ward,WardCode FROM shelter_jp WHERE id=\"".$id."\"";
 				$stmt = $dbh->query($sql);
 
 				$result = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -11,7 +11,7 @@
 
     /*区ごとに防災拠点を出力*/
     for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT Name,Address,Ward,WardCode FROM shelter_jp WHERE Definition = \"".$definition."\" AND WardCode=".$i;
+      $sql = "SELECT id,Name,Address,Ward,WardCode FROM shelter_jp WHERE Definition = \"".$definition."\" AND WardCode=".$i;
 		  $stmt = $dbh->query($sql);
       if($i>=2){
         print("</ul>");
@@ -28,7 +28,7 @@
        <ul>
 		<?php } ?>
 		<li>
-			<a href="facility.php?name=<?=$result["Name"]?>">
+			<a href="facility.php?id=<?=$result["id"]?>">
 				<div class="base_name"><?=$result["Name"]?></div>
 				<div class="base_address">住所:<?=$result["Address"]?></div>
 			</a>
