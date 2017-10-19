@@ -45,7 +45,7 @@ if($val1 != null){
 
 
 
-/*
+
 	$m_lat = 0;
 	$m_lon = 0;
 	foreach(range(1, $count) as $i):
@@ -54,7 +54,7 @@ if($val1 != null){
 	endforeach;
 	$m_lat = round($m_lat / $count, 8);
 	$m_lon = round($m_lon / $count, 8);
-*/
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,13 +91,12 @@ if($val1 != null){
 		</select>
 		<input type = "submit" value ="送信">
 	</form>
-<?=$count?>
 	<div id="map"></div>
 
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
 
-
+<!--
 	<script>
 		$(function(){
 
@@ -154,19 +153,19 @@ if($val1 != null){
 
 		});
 	</script>
+-->
 
 
 
 
 
 
-<!--
 	<script>
 	var map;
 	var marker = [];
 	var infoWindow = [];
 	var markerData = [ // マーカーを立てる場所名・緯度・経度
-		<?php foreach(range(1, $content) as $i): ?>
+		<?php foreach(range(1, $count) as $i): ?>
 			{
 				name: "<?=$name[$i]?>",
 				lat: <?=$lat[$i]?>,
@@ -216,7 +215,7 @@ if($val1 != null){
 	  });
 	}
 	</script>
--->
+
 
 
 
