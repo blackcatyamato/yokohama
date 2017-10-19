@@ -13,15 +13,15 @@
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
 
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
+		<link rel="stylesheet" href="<?=$path?>content/css/style_header.css">
 	</head>
 
 	<body>
 		<div class="wrap">
-			<header>
-				<div class="inner">
-					<h1>YDP</h1>
-				</div>
-			</header>
+			<?php
+				$page = "トップ";
+				include "./header.php";
+			?>
 			<main>
 				<h2>
 					<marquee>まずは落ち着きましょう…</marquee>
