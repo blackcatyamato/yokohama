@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_1.css">
+		<link rel="stylesheet" href="./content/css/style_header.css">
 		<title>地域防災拠点-Yokohama Disaster Prevention</title>
 	</head>
 	<body>
