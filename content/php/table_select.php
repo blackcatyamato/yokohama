@@ -49,8 +49,8 @@
 		$name[$i] = htmlspecialchars($row["Name"]);
 		$address[$i] = htmlspecialchars($row["Address"]);
 		$ward[$i] = htmlspecialchars($row["Ward"]);
-		$lat[$i] = round(htmlspecialchars($row["Lat"]), 8);
-		$lon[$i] = round(htmlspecialchars($row["Lon"]), 8);
+		$lat[$i] = htmlspecialchars($row["Lat"]);
+		$lon[$i] = htmlspecialchars($row["Lon"]);
 		$i++;
 		$count++;
 	}

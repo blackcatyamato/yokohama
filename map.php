@@ -24,6 +24,7 @@ if($val1 != null){
 		$lang = $_COOKIE["langCookie"];
 	}
 
+
 }else{
 	if(isset($_COOKIE["langCookie"])){
 		$lang = $_COOKIE["langCookie"];
