@@ -1,0 +1,4 @@
+﻿トップ:index.php
+地域防災拠点リスト:pg_list_rgbase.php
+津波避難施設:pg_list_tsunami.php
+施設詳細:pg_facility.php
