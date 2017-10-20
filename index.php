@@ -46,7 +46,7 @@
 						<h4>案内</h4>
 						<ul>
 							<li class="Tunami">
-								<a href="#">津波避難
+								<a href="<?=$path?>map.php?type=tsunami">津波避難
 									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
@@ -61,7 +61,7 @@
 								</a>
 							</li>
 							<li class="Tbousai">
-								<a href="<?=$path?>map.php">地域防災拠点
+								<a href="<?=$path?>map.php?type=shelter">地域防災拠点
 									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
@@ -77,6 +77,43 @@
 						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 				</div>
+
+<div class="inner">
+	<div class="box_menu">
+		<h4>案内</h4>
+		<ul>
+			<li class="Tunami">
+				<a href="#">津波避難
+					<img src="<?=$path?>content/img/tsunami2.png">
+				</a>
+			</li>
+			<li class="Item">
+				<a href="#">医療・避難道具
+					<img src="<?=$path?>content/img/medical.jpg">
+				</a>
+			</li>
+			<li class="Hinan">
+				<a href="#">帰宅困難者避難所
+					<img src="<?=$path?>content/img/tsunami2.png">
+				</a>
+			</li>
+			<li class="Tbousai">
+				<a href="<?=$path?>map.php?type=shelter">地域防災拠点
+					<img src="<?=$path?>content/img/tsunami2.png">
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="box_info">
+		<p>txcuygftgvhgbjugiyutfguhb</p>
+	</div>
+
+	<div class="box_twitter">
+		<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
 			</main>
 		</div>
 	</body>

@@ -1,5 +1,7 @@
 <?php
 	$path = "";
+
+	$type = "shelter";
 	$lang = "jp";
 	$ku = "1";
 
@@ -32,6 +34,11 @@ if($val1 != null){
 }
 
 /************************************************/
+
+
+	if(isset($_GET["type"])){
+		$type = $_GET["type"];
+	}
 
 
 	if(isset($_GET["ku"])){
@@ -85,6 +92,7 @@ if($val1 != null){
 	</form>
 
 	<form method="GET">
+		<input type="hidden" name="type" value="<?=$type?>">
 		<select name="ku">
 			<?php foreach(range(1, $ward_count) as $i): ?>
 				<option value="<?=$wardCode_list[$i]?>"><?=$ward_list[$i]?></option>
