@@ -6,7 +6,7 @@
 					Ward,
 					WardCode
 				FROM
-					shelter_{$lang}
+					{$type}_{$lang}
 				GROUP BY
 					Ward
 				ORDER BY
@@ -29,14 +29,13 @@
 	$stmt = $pdo->prepare("
 				SELECT
 					Name,
-					Definition,
 					Address,
 					Ward,
 					WardCode,
 					Lat,
 					Lon
 				FROM
-					shelter_{$lang}
+					{$type}_{$lang}
 				WHERE
 					WardCode LIKE ?
 			");
@@ -51,6 +50,7 @@
 		$ward[$i] = htmlspecialchars($row["Ward"]);
 		$lat[$i] = htmlspecialchars($row["Lat"]);
 		$lon[$i] = htmlspecialchars($row["Lon"]);
+
 		$i++;
 		$count++;
 	}
