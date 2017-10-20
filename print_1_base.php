@@ -24,7 +24,7 @@
 		<?php if($i>=2){ ?>
 		</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>
 		<?php } ?>
-		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><?=$result["Ward"]?><a href="map.php?ku=<?=$result['Ward']?>">→マップから探す</a></h3>
+		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><?=$result["Ward"]?><!--<a href="map.php?ku=<?=$result['Ward']?>">→マップから探す</a>//--></h3>
        <ul>
 		<?php } ?>
 		<li>
