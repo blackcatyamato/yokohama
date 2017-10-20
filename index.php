@@ -3,6 +3,12 @@
 	$stmt = null;
 	$pdo = null;
 
+
+	require_once("{$path}content/php/phpQuery-onefile.php");
+	$html = file_get_contents("http://www.city.yokohama.lg.jp/ex/kikikanri/weather/.cgi/yokohama/warning.cgi?cache=%27+(new%20Date()).getTime()");
+	$doc = phpQuery::newDocument($html);
+	$saigai = $doc["marquee"]->text();
+
 ?>
 
 <!DOCTYPE html>
@@ -32,54 +38,12 @@
 						<h3 class="panel-title"><a name="warn"></a>横浜市域の警報・注意報</h3>
 					</div>
 					<div class="panel-body">
-						<div id="warning2"></div>
-							<noscript>
-								<div>
-									<p>aaaaas
-										<a href="http://www.city.yokohama.lg.jp/ex/kikikanri/weather/ippan1/index_warning.html">→ 警報・注意報のページへ</a>
-									</p>
-								</div>
-							</noscript>
-					</div>
-					<script type="text/javascript" src="http://www.city.yokohama.lg.jp/somu/org/kikikanri/js/jquery.min.js">
-					</script>
-					<script type="text/javascript">
-						var $warning2Content = $("#warning2")
-						$.ajax({
-							url: 'http://www.city.yokohama.lg.jp/ex/kikikanri/weather/.cgi/yokohama/warning.cgi?cache='+(new Date()).getTime(),
-							type: "GET",
-							cache: false,
-							dataType: "html",
-							success: function(html) {
-								$content = $(html).find("marquee");
-								$warning2Content.append($content);
-							}
-						});
 
-						$(function() {
-							$('.multiple-item').slick({
-								infinite: true,
-								dots:true,
-								slidesToShow: 8,
-								slidesToScroll: 8,
-								responsive: [
-									{
-									breakpoint: 768,
-										settings: {
-											slidesToShow: 4,
-											slidesToScroll: 4,
-										}
-									},{
-									breakpoint: 480,
-										settings: {
-											slidesToShow: 3,
-											slidesToScroll: 3,
-										}
-									}
-								]
-							});
-						});
-					</script>
+						<div id="warning2"></div>
+
+						<div><marquee><?=$saigai?></marquee></div>
+
+					</div>
 				</div>
 
 <div class="inner">
