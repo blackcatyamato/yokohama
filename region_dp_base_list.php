@@ -10,12 +10,10 @@
 		<title>地域防災拠点-Yokohama Disaster Prevention</title>
 	</head>
 	<body>
-		<header>
 			<?php
 				$page = "地域防災拠点";
 				include "./header.php";
 			?>
-		</header>
 		<main id="0">
 			<div class="base_list">
 				<h2>

@@ -11,15 +11,15 @@
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_facility.css">
+		<link rel="stylesheet" href="./content/css/style_header.css">
 <?php
 		print("<title>".$name."-Yokohama Disaster Prevention</title>");
 ?>
 	</head>
-		<header>
-			<h1>
-				YDP
-			</h1>
-		</header>
+		<?php
+			$page = "施設詳細";
+			include "./header.php";
+		?>
 	<body>
 		<main>?
 			<?php
