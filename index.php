@@ -51,7 +51,7 @@
 		<h4>案内</h4>
 		<ul>
 			<li class="Tunami">
-				<a href="<?=$path?>map.php">津波避難
+				<a href="#">津波避難
 					<img src="<?=$path?>content/img/tsunami2.png">
 				</a>
 			</li>
@@ -66,7 +66,7 @@
 				</a>
 			</li>
 			<li class="Tbousai">
-				<a href="#">地域防災拠点
+				<a href="<?=$path?>map.php">地域防災拠点
 					<img src="<?=$path?>content/img/tsunami2.png">
 				</a>
 			</li>
