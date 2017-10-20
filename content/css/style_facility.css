@@ -9,18 +9,29 @@ body{
   height:auto;
 }
 /*施設詳細情報*/
-.ft_box{
+.fa_box{
   min-width:580px;
   width:65%;
   background:rgba(255,255,255,0.7);
   border-radius:20px/20px;
   box-shadow:1px 1px 3px rgba(0,0,0,0.5);
 }
-.ft_box h3{
+.fa_box h3{
   /*background:blue;*/
-  border-bottom:2px solid royalblue;
+  border-bottom:2px solid #288c66;
   color:black;
   font-size:150%;
   margin:10px;
   /*box-shadow:2px 2px 5px rgba(0,0,0,0.5)inset;*/
+}
+.fa_inner{
+	background:rgba(40,140,102,0.6);
+  border:3px solid #288c66;
+  margin: 1%;
+  margin-bottom:4%;
+  border-radius:7px/7px;
+}
+.fa_inner h4{
+	font-size:125%;
+	border-bottom:1px dotted white;
 }

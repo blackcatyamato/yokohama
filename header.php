@@ -2,7 +2,7 @@
   <div class="inner" id="hd">
     <h1><a href="./index.php"><img src="./content/img/icon_top2.png"><!--ロゴ色:#49A149//--></a></h1>
     <?php
-        if($page != "トップ"){
+        //if($page != "トップ"){
     ?>
         <div ontouchstart=""><p></p>
             <ul>
@@ -18,7 +18,7 @@
             </ul>
         </div>
     <?php
-        }
+        //}
     ?>
   </div>
 </header>
