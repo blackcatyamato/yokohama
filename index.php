@@ -41,45 +41,6 @@
 								</div>
 							</noscript>
 					</div>
-					<script type="text/javascript" src="http://www.city.yokohama.lg.jp/somu/org/kikikanri/js/jquery.min.js">
-					</script>
-					<script type="text/javascript">
-						var $warning2Content = $("#warning2")
-						$.ajax({
-							url: 'http://www.city.yokohama.lg.jp/ex/kikikanri/weather/.cgi/yokohama/warning.cgi?cache='+(new Date()).getTime(),
-							type: "GET",
-							cache: false,
-							dataType: "html",
-							success: function(html) {
-								$content = $(html).find("marquee");
-								$warning2Content.append($content);
-							}
-						});
-
-						$(function() {
-							$('.multiple-item').slick({
-								infinite: true,
-								dots:true,
-								slidesToShow: 8,
-								slidesToScroll: 8,
-								responsive: [
-									{
-									breakpoint: 768,
-										settings: {
-											slidesToShow: 4,
-											slidesToScroll: 4,
-										}
-									},{
-									breakpoint: 480,
-										settings: {
-											slidesToShow: 3,
-											slidesToScroll: 3,
-										}
-									}
-								]
-							});
-						});
-					</script>
 				</div>
 
 <div class="inner">
