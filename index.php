@@ -3,6 +3,12 @@
 	$stmt = null;
 	$pdo = null;
 
+
+	require_once("{$path}content/php/phpQuery-onefile.php");
+	$html = file_get_contents("http://www.city.yokohama.lg.jp/ex/kikikanri/weather/.cgi/yokohama/warning.cgi?cache=%27+(new%20Date()).getTime()");
+	$doc = phpQuery::newDocument($html);
+	$saigai = $doc["marquee"]->text();
+
 ?>
 
 <!DOCTYPE html>
@@ -32,14 +38,11 @@
 						<h3 class="panel-title"><a name="warn"></a>横浜市域の警報・注意報</h3>
 					</div>
 					<div class="panel-body">
+
 						<div id="warning2"></div>
-							<noscript>
-								<div>
-									<p>aaaaas
-										<a href="http://www.city.yokohama.lg.jp/ex/kikikanri/weather/ippan1/index_warning.html">→ 警報・注意報のページへ</a>
-									</p>
-								</div>
-							</noscript>
+
+						<div><marquee><?=$saigai?></marquee></div>
+
 					</div>
 				</div>
 
@@ -48,7 +51,7 @@
 		<h4>案内</h4>
 		<ul>
 			<li class="Tunami">
-				<a href="<?=$path?>map.php">津波避難
+				<a href="#">津波避難
 					<img src="<?=$path?>content/img/tsunami2.png">
 				</a>
 			</li>
@@ -63,7 +66,7 @@
 				</a>
 			</li>
 			<li class="Tbousai">
-				<a href="#">地域防災拠点
+				<a href="<?=$path?>map.php">地域防災拠点
 					<img src="<?=$path?>content/img/tsunami2.png">
 				</a>
 			</li>
