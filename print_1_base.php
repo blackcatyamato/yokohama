@@ -11,7 +11,7 @@
 
     /*区ごとに防災拠点を出力*/
     for($i=1;$i<=$wardnumber;$i++){
-      $sql = "SELECT id,Name,Address,Ward,WardCode FROM shelter_jp WHERE Definition = \"".$definition."\" AND WardCode=".$i;
+      $sql = "SELECT id,Name,Address,Ward,WardCode FROM ".$definition." WHERE WardCode=".$i;
 		  $stmt = $dbh->query($sql);
       if($i>=2){
         print("</ul>");
@@ -24,7 +24,7 @@
 		<?php if($i>=2){ ?>
 		</ul><div class="return"><p><a href="#0">ページ上へ</a></p></div></div>
 		<?php } ?>
-		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><?=$result["Ward"]?>
+		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><span><?=$result["Ward"]?></span>
 		<?php
 			if($definition == "地域防災拠点"){
 				echo '<a href="map.php?ku='.$result['Ward'].'">→マップから探す</a>';

@@ -42,7 +42,7 @@
 				</div>
 				<div class="print">
 				<?php
-					$definition = "地域防災拠点";
+					$definition = "shelter_jp";
 					include "print_1_base.php";
 				 ?>
 				</div>
