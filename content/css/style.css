@@ -1,6 +1,10 @@
 /*----------------------------------------
 全体
 ----------------------------------------*/
+html{
+	height: 100%;
+}
+
 body{
 	height:100%;
 }
@@ -12,16 +16,45 @@ body{
 /*----------------------------------------
 中身
 ----------------------------------------*/
+
+
+/*--------------------------------------*/
+header{
+	background:white;
+	height: 70px;
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
+
+header h1{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+header a{
+	display: inline-block;
+	line-height: 0;
+}
+
+header img{
+	height:60px;
+	width:450px;
+}
+
+header .menu1{
+	display: none;
+}
+
+
+
 .inner{
 	margin:0 auto;
 	width:830px;
 }
-/* 見出し */
-h1{
-	height:auto;
-	width:auto;
-}
+/*--------------------------------------*/
 
+
+/* 見出し */
 h2{
 	background:#99ff99;
 	display:flex;
@@ -62,14 +95,12 @@ main{
 	flex-wrap:wrap;
 	justify-content:space-around;
 	height:auto;
-	padding-top:65px;
 }
 /*
 div[class^="box"]{
 	margin:10px 0;
 	width:430px;
 }
-*/
 /*----------------------------------------
 流れる警報
 ----------------------------------------*/
@@ -212,21 +243,7 @@ sinihisaスマホ対応
 	.box_menu{
 		width:100%;
 	}
-}
-/*----------------------------------------
-sinihisaスマホ対応2
-----------------------------------------*/
-@media screen and (max-width:500px) {
-	/* 中身 */
-	.inner{
-		width:100%;
-	}
-	/* 見出し */
-	h4{
-		font-weight:300;
-	}
-	/* メニューＢＯＸ */
-	.box_menu{
-		width:100%;
+	.box_menu li{
+		margin:0 auto;
 	}
 }

@@ -17,19 +17,73 @@
 		<meta charset="utf-8">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
-		<link rel="stylesheet" href="<?=$path?>content/css/Index_header.css">
+
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
+
+
+		<style>
+		.pagetop {
+		    display: none;
+		    position: fixed;
+		    bottom: 30px;
+		    right: 15px;
+		}
+		.pagetop a {
+		    display: block;
+		    background-color: #555;
+		    text-align: center;
+		    color: #222;
+		    font-size: 12px;
+		    text-decoration: none;
+		    padding: 5px 10px;
+			filter:alpha(opacity=50);
+		    -moz-opacity: 0.5;
+		    opacity: 0.5;
+		}
+		.pagetop a:hover {
+		    display: block;
+		    background-color: #b2d1fb;
+		    text-align: center;
+		    color: #fff;
+		    font-size: 12px;
+		    text-decoration: none;
+		    padding:5px 10px;
+			filter:alpha(opacity=50);
+		    -moz-opacity: 0.5;
+		    opacity: 0.5;
+		}
+		</style>
+
+		<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
+
+		<script>
+		$(document).ready(function() {
+		  var pagetop = $('.pagetop');
+		    $(window).scroll(function () {
+		       if ($(this).scrollTop() > 100) {
+		            pagetop.fadeIn();
+		       } else {
+		            pagetop.fadeOut();
+		            }
+		       });
+		       pagetop.click(function () {
+		           $('body, html').animate({ scrollTop: 0 }, 500);
+		              return false;
+		   });
+		});
+		</script>
 	</head>
 
 	<body>
-		<header>
-			<h1>
-				<a href="./index.php">
-					<img src="./content/img/icon_top.png">
-				</a>
-			</h1>
-		</header>
 		<div class="wrap">
+
+			<p class="pagetop"><a href="#">▲</a></p>
+
+			<?php
+				$page = "トップ";
+				include "./header.php";
+			?>
+
 			<main>
 				<h2>
 					<marquee>まずは落ち着きましょう…</marquee>
@@ -72,7 +126,10 @@
 					</div>
 
 					<div class="box_info">
-						<p>txcuygftgvhgbjugiyutfguhb</p>
+						<p>
+							更新情報：<br>
+							無し
+						</p>
 					</div>
 
 					<div class="box_twitter">

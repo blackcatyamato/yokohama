@@ -76,7 +76,7 @@ if($val1 != null){
 			height: 600px;
 		}
 	</style>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
 
 </head>
 
