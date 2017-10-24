@@ -72,7 +72,10 @@
 					</div>
 
 					<div class="box_info">
-						<p>txcuygftgvhgbjugiyutfguhb</p>
+						<p>
+							更新情報：<br>
+							無し
+						</p>
 					</div>
 
 					<div class="box_twitter">
