@@ -10,22 +10,6 @@ body{
 	min-height: 100%;
 }
 /*----------------------------------------
-ヘッダー
-----------------------------------------*/
-/*header{
-	background:white;
-	box-shadow:0 10px 50px rgba(231,151,62,0.9);
-	height:50px;
-	position:fixed;
-	z-index: 10;
-	top:0;
-	width:100%;
-}
-h1 a img{
-	width:80%;
-	height:50px;
-}*/
-/*----------------------------------------
 中身
 ----------------------------------------*/
 .inner{
@@ -78,7 +62,7 @@ main{
 	flex-wrap:wrap;
 	justify-content:space-around;
 	height:auto;
-	padding-top:50px;
+	padding-top:65px;
 }
 /*
 div[class^="box"]{
@@ -218,7 +202,7 @@ sinihisaスマホ対応
 @media screen and (max-width:900px) {
 	/* 中身 */
 	.inner{
-		width:500px;
+		width:100%;
 	}
 	/* 見出し */
 	h4{
@@ -235,7 +219,7 @@ sinihisaスマホ対応2
 @media screen and (max-width:500px) {
 	/* 中身 */
 	.inner{
-		width:230px;
+		width:100%;
 	}
 	/* 見出し */
 	h4{
