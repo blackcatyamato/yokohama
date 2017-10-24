@@ -1,5 +1,5 @@
 <header>
-  <div class="inner" id="hd">
+  <div id="hd">
     <h1><a href="./index.php"><img src="./content/img/icon_top2.png"><!--ロゴ色:#49A149//--></a></h1>
     <?php
         //if($page != "トップ"){
