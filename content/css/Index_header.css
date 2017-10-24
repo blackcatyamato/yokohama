@@ -1,0 +1,56 @@
+/*----------------------------------------
+ヘッダー
+----------------------------------------*/
+header{
+	position:fixed;
+	top:0;
+	z-index:10;
+	width:100%;
+	text-align:center;
+}
+header h1{
+	background-color:white;
+}
+header h1 img{
+	height:60px;
+	width:450px;
+}
+/*----------------------------------------
+sinihisaスマホ対応
+----------------------------------------*/
+@media screen and (max-width:900px) {
+	/* 中身 */
+	.inner{
+		width:100%;
+	}
+	/* 見出し */
+	h4{
+		font-weight:300;
+	}
+	/* メニューＢＯＸ */
+	.box_menu{
+		width:100%;
+	}
+}
+/*----------------------------------------
+sinihisaスマホ対応2
+----------------------------------------*/
+@media screen and (max-width:500px) {
+	/* ヘッダー */
+	header h1 img{
+		height:50px;
+		width:250px;
+	}
+	/* 中身 */
+	.inner{
+		width:100%;
+	}
+	/* 見出し */
+	h4{
+		font-weight:300;
+	}
+	/* メニューＢＯＸ */
+	.box_menu{
+		width:100%;
+	}
+}
