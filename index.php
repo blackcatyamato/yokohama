@@ -17,17 +17,16 @@
 		<meta charset="utf-8">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
-
+		<link rel="stylesheet" href="<?=$path?>content/css/style_common.css">
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
-		<link rel="stylesheet" href="<?=$path?>content/css/style_header.css">
 	</head>
 
 	<body>
-		<div class="wrap">
 			<?php
 				$page = "トップ";
 				include "./header.php";
 			?>
+		<div class="wrap">
 			<main>
 				<h2>
 					<marquee>まずは落ち着きましょう…</marquee>
