@@ -1,0 +1,160 @@
+body{
+	width:100%;
+	height:auto;
+	background:url("../img/022Yamasha17103_TP_V.jpg");
+}
+header{
+	position:fixed;
+	top:0;
+	width:100%;
+	height:50px;
+	background:white;
+	box-shadow:0px 1px 1px rgba(0,0,0,0.5);
+}
+header h1{
+	width:auto;
+	height:auto;
+	margin-top:5px;
+	margin-left:5px;
+	background:white;
+}
+header h1 img{
+  height:100%;
+}
+footer{
+	width:100%;
+	max-height:100px;
+	min-height:50px;
+	border-top:1px solid black;
+}
+header #hd{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+header #hd div{
+      position:relative;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+}
+header ul{
+    display:none;
+}
+header #hd div:hover ul{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+header li{
+    width:400px;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    border-top:1px solid gray;
+    background: white;
+    border-radius: 0;
+    margin:0;
+}
+header li:last-child{
+    border-bottom: 1px solid gray;
+}
+header li a{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+}
+header li:hover{
+  background:#B9FFFF;
+}
+header p{
+  background:url("../img/icon_menu.png");
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-left:2px solid gray;
+}
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:12vh;
+  background:rgba(255,255,255,0.7);
+  min-width:580px;
+  width:65%;
+  height:auto;
+  border-radius:20px/20px;
+}
+.box h2{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  width:95%;
+  margin: 1vh;
+  font-size:200%;
+  color:black;
+  border-bottom:2px solid #288c66;
+}
+.box ul{
+	width:95%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+	background:green;
+}
+.box li{
+	width:16%;
+	min-width:170px;
+	background:white;
+	  display:flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content:center;
+		margin:5px;
+		margin-left:1%;
+		margin-right:1%;
+}
+#info{
+	width:93%;
+	height:300px;
+	border:1px solid black;
+	background:white;
+}
+@media screen and (orientation:landscape){
+  header h1{
+    height:40px;
+  }
+  header p{
+    width:75px;
+    height:50px;
+  }
+  header li{
+    height:40px;
+  }
+}
+
+@media screen and (orientation:portrait){
+  header{
+    height:100px;
+  }
+  header h1{
+    height:90px;
+  }
+  header p{
+    width:100px;
+    height:100px;
+  }
+  header li{
+    height:90px;
+  }
+}
