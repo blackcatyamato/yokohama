@@ -57,7 +57,7 @@
 								</a>
 							</li>
 							<li class="Hinan">
-								<a href="#">帰宅困難者避難所
+								<a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所
 									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
