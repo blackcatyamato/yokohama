@@ -1,4 +1,32 @@
-﻿header{
+﻿
+header{
+	background:white;
+	height: 50px;
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
+
+header h1{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+header a{
+	display: inline-block;
+	line-height: 0;
+}
+
+header img{
+	height: 40px;
+}
+
+header .menu1{
+	display: none;
+}
+
+
+/*
+header{
 	position:fixed;
 	top:0;
 	width:100%;
@@ -101,3 +129,4 @@ header p{
     height:90px;
   }
 }
+*/

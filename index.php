@@ -23,11 +23,13 @@
 	</head>
 
 	<body>
-		<?php
-			$page = "トップ";
-			include "./header.php";
-		?>
 		<div class="wrap">
+
+			<?php
+				$page = "トップ";
+				include "./header.php";
+			?>
+
 			<main>
 				<h2>
 					<marquee>まずは落ち着きましょう…</marquee>
