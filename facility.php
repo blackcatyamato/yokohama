@@ -1,6 +1,7 @@
 <?php
 	if($_GET){
 		$id = $_GET["id"];
+		$ward = $_GET["ward"];
 	}
 ?>
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
 
 				$result = $stmt->fetch(PDO::FETCH_ASSOC);
 				print("<div class=\"fa_box\">");
-				print("<h3>".$result["Name"]."</h3>");
+				print("<h3>".$result["Name"]."(".$ward.")</h3>");
 				print("<div class=\"fa_inner\">");
 				print("<h4>住所</h4>");
 				print("<p>".$result["Address"]."</p>");

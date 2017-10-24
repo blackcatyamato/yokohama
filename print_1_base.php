@@ -34,7 +34,7 @@
        <ul>
 		<?php } ?>
 		<li>
-			<a href="facility.php?id=<?=$result["id"]?>">
+			<a href="facility.php?id=<?=$result["id"]?>&ward=<?=$result["Ward"]?>">
 				<div class="base_name"><?=$result["Name"]?></div>
 				<div class="base_address">住所:<?=$result["Address"]?></div>
 			</a>

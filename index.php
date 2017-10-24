@@ -15,6 +15,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
 		<link rel="stylesheet" href="<?=$path?>content/css/style_common.css">
