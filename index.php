@@ -51,7 +51,7 @@
 								</a>
 							</li>
 							<li class="Item">
-								<a href="#">医療・避難道具
+								<a href="<?=$path?>map.php?type=water">医療・避難道具
 									<img src="<?=$path?>content/img/medical.jpg">
 								</a>
 							</li>
