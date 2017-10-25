@@ -42,7 +42,7 @@
 				</div>
 				<div class="print">
 				<?php
-					$definition = "津波避難施設";
+					$definition = "tsunami_jp";
 					include "print_1_base.php";
 				 ?>
 				</div>
