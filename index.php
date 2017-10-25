@@ -104,22 +104,22 @@
 						<ul>
 							<li class="Tunami">
 								<a href="<?=$path?>map.php?type=tsunami">津波避難
-									<img src="<?=$path?>content/img/tsunami2.png">
+									<img src="<?=$path?>content/img/Tsunami.jpg">
 								</a>
 							</li>
 							<li class="Item">
 								<a href="<?=$path?>map.php?type=water">医療・避難道具
-									<img src="<?=$path?>content/img/medical.jpg">
+									<img src="<?=$path?>content/img/Medical.jpg">
 								</a>
 							</li>
 							<li class="Hinan">
 								<a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所
-									<img src="<?=$path?>content/img/tsunami2.png">
+									<img src="<?=$path?>content/img/Kitaku_Konnan.jpg">
 								</a>
 							</li>
 							<li class="Tbousai">
 								<a href="<?=$path?>map.php?type=shelter">地域防災拠点
-									<img src="<?=$path?>content/img/tsunami2.png">
+									<img src="<?=$path?>content/img/Ti-ki_Bousai.jpg">
 								</a>
 							</li>
 						</ul>
