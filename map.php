@@ -168,8 +168,6 @@ if($val1 != null){
 
 
 
-
-
 </body>
 
 </html>

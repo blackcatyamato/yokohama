@@ -42,7 +42,7 @@
 					WardCode LIKE ?
 
 			");
-	$stmt->bindValue(1, $id_test, PDO::PARAM_INT);
+	$stmt->bindValue(1, $id_test, PDO::PARAM_STR);
 	$stmt->bindValue(2, $ku, PDO::PARAM_STR);
 	$stmt->execute();
 
