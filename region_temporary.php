@@ -6,17 +6,17 @@
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_1.css">
-		<title>地域防災拠点-Yokohama Disaster Prevention</title>
+		<title>帰宅困難者避難所-Yokohama Disaster Prevention</title>
 	</head>
 	<body>
 			<?php
-				$page = "地域防災拠点";
+				$page = "帰宅困難者避難所";
 				include "./header.php";
 			?>
 		<main id="0">
 			<div class="base_list">
 				<h2>
-					<span style="margin-right:20px;">地域防災拠点一覧</span><!--<span>Disaster&nbspPrevention&nbspBase</span>//-->
+					<span style="margin-right:20px;">帰宅困難者避難所一覧</span><!--<span>Disaster&nbspPrevention&nbspBase</span>//-->
 				</h2>
 				<div class="ward_link">
 				<ul>
@@ -42,7 +42,7 @@
 				</div>
 				<div class="print">
 				<?php
-					$definition = "shelter_jp";
+					$definition = "temporary_jp";
 					include "print_1_base.php";
 				 ?>
 				</div>

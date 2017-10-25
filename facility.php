@@ -2,6 +2,7 @@
 	if($_GET){
 		$id = $_GET["id"];
 		$ward = $_GET["ward"];
+		$definition = $_GET["definition"];
 	}
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,7 @@
 			$path="";
 			$dbh = new PDO("sqlite:{$path}content/db/sqlite.db");
 			try{
-				$sql = "SELECT Name,Address,Ward,WardCode FROM shelter_jp WHERE id=\"".$id."\"";
+				$sql = "SELECT Name,Address,Ward,WardCode FROM ".$definition." WHERE id=\"".$id."\"";
 				$stmt = $dbh->query($sql);
 
 				$result = $stmt->fetch(PDO::FETCH_ASSOC);
