@@ -66,6 +66,7 @@
 			#map{
 				width: 600px;
 				height: 600px;
+				margin: 0 auto;
 			}
 		</style>
 		<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
@@ -82,17 +83,11 @@
 				<h3><?=$name[1]?><?=$ward[1]?></h3>
 				<div class="fa_inner">
 				<h4>住所</h4>
-				
 				<p><?=$address[1]?></p>
+				<div id="map"></div>
 				</div>
 			</div>
 		</main>
-
-
-
-
-	<div id="map"></div>
-
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
 	
