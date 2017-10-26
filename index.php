@@ -18,6 +18,7 @@
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
 
+		<link rel="stylesheet" href="<?=$path?>content/css/jquery.mmenu.all.css">
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
 
 
@@ -54,28 +55,111 @@
 		}
 		</style>
 
+
+		<style>
+		.menu-btn {
+			position: fixed;
+			top: 0;
+			right: 20px;
+			width: 60px;
+			height: 60px;
+			display: block;
+			z-index: 5;
+		}
+
+		.menu-btn span{
+			position: absolute;
+			left: 10px;
+			width: 40px;
+			height: 6px;
+			background: #777;
+			border-radius: 2px;
+		}
+
+		.menu_border1 {
+			top:9px;
+		}
+
+		.menu_border2 {
+			top:24px;
+		}
+
+		.menu_border3 {
+			top:39px;
+		}
+
+		#menu a:hover{
+/*			background: #AAA;*/
+		}
+
+		.menu-btn:hover{
+/*			background: #AAA;*/
+		}
+		</style>
+
 		<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
+		<script src="<?=$path?>content/js/jquery.mmenu.all.js"></script>
+
+<script>
+$(window).on('load resize', function(){
+    $(window).scroll(function() {
+		var scroll = $(window).scrollTop() - 55;
+		$(".menu_border1").css({
+			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
+
+		});
+
+		var scroll = $(window).scrollTop() - 40;
+		$(".menu_border2").css({
+			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
+
+		});
+
+		var scroll = $(window).scrollTop() - 25;
+		$(".menu_border3").css({
+			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
+
+		});
+	});
+});
+</script>
 
 		<script>
-		$(document).ready(function() {
-		  var pagetop = $('.pagetop');
-		    $(window).scroll(function () {
-		       if ($(this).scrollTop() > 100) {
-		            pagetop.fadeIn();
-		       } else {
-		            pagetop.fadeOut();
-		            }
-		       });
-		       pagetop.click(function () {
-		           $('body, html').animate({ scrollTop: 0 }, 500);
-		              return false;
-		   });
-		});
+			$(function() {
+				$("#menu").mmenu({
+					"offCanvas": {
+						"position": "right",
+					},
+					"extensions": [
+						"theme-dark",
+						"pagedim-black"
+					]
+				});
+			});
 		</script>
+		<script src="<?=$path?>content/js/script.js"></script>
 	</head>
 
 	<body>
 		<div class="wrap">
+
+
+			<nav id="menu">
+				<ul>
+					<li><a href="<?=$path?>">aaaaa</a></li>
+					<li><a href="<?=$path?>">bbbbb</a></li>
+				</ul>
+			</nav>
+
+
+			<a class="menu-btn" href="#menu">
+				<span class="menu_border1"></span>
+				<span class="menu_border2"></span>
+				<span class="menu_border3"></span>
+			</a>
+
+
+
 
 			<p class="pagetop"><a href="#">▲</a></p>
 
