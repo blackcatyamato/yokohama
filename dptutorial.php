@@ -1,6 +1,6 @@
 <?php
   $mode = null;
-  if(isset($_GET)){
+  if($_GET){
     $mode = $_GET["mode"];
   }
 

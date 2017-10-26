@@ -215,7 +215,7 @@
 
 		<main>
 			<div class="fa_box">
-				<h3><?=$name[1]?><?=$ward[1]?></h3>
+				<h3><?=$name[1]?>(<?=$ward[1]?>)</h3>
 				<div class="fa_inner">
 				<h4>住所</h4>
 				<p><?=$address[1]?></p>

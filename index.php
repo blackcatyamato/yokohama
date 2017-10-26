@@ -181,6 +181,12 @@
 						</p>
 					</div>
 
+					<div class="box_tutorial">
+							<a href="<?=$path?>dptutorial.php">
+								<span>防災チュートリアル</span>
+							</a>
+					</div>
+
 					<div class="box_twitter">
 						<a class="twitter-timeline" href="https://twitter.com/yokohama_saigai">Tweets by yokohama_saigai</a>
 						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
