@@ -16,7 +16,7 @@
 
 
 /*====ハンバーガーメニュー============================================*/
-$(window).on('load resize', function(){
+$(window).on('load scroll resize', function(){
     $(window).scroll(function() {
 		var scroll = $(window).scrollTop() - 55;
 		$(".menu_border1").css({
