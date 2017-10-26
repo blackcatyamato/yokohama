@@ -145,6 +145,11 @@ $(window).on('load resize', function(){
 		<div class="wrap">
 			<nav id="menu">
 				<ul>
+					<li><span style="color: #BBB;">リスト</span></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=tsunami">津波避難</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=water">医療・避難道具</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=temporary">帰宅困難者避難所</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=shelter">地域防災拠点</a></li>
 					<li><span style="color: #BBB;">マップ</span></li>
 					<li><a href="<?=$path?>map.php?type=tsunami">津波避難</a></li>
 					<li><a href="<?=$path?>map.php?type=water">医療・避難道具</a></li>
