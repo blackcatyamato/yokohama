@@ -230,10 +230,13 @@ footer{
 /*----------------------------------------
 sinihisaスマホ対応
 ----------------------------------------*/
-@media screen and (max-width:900px) {
+
+
+@media screen and (max-width:850px) and (min-width:641px) {
 	/* 中身 */
 	.inner{
 		width:100%;
+		background-color:yellow;
 	}
 	/* 見出し */
 	h4{
@@ -242,6 +245,38 @@ sinihisaスマホ対応
 	/* メニューＢＯＸ */
 	.box_menu{
 		width:100%;
+	}
+	.box_menu ul{
+		display:flex;
+		flex-direction:column;
+		flex-wrap:wrap;
+		justify-content:space-between;
+		width:200px;
+	}
+	.box_menu li{
+		margin:0 auto;
+	}
+
+}
+@media screen and (max-width:640px) {
+	/* 中身 */
+	.inner{
+		width:100%;
+		background-color:yellow;
+	}
+	/* 見出し */
+	h4{
+		font-weight:300;
+	}
+	/* メニューＢＯＸ */
+	.box_menu{
+		width:100%;
+	}
+	.box_menu ul{
+		display:flex;
+		flex-direction:wrap;
+		justify-content:space-around;
+		width:200px;
 	}
 	.box_menu li{
 		margin:0 auto;
