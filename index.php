@@ -185,22 +185,22 @@ $(window).on('load resize', function(){
 						<h4>案内</h4>
 						<ul>
 							<li class="Tunami">
-								<a href="<?=$path?>map.php?type=tsunami">津波避難
+								<a href="<?=$path?>region_tsunami_dp_list.php">津波避難
 									<img src="<?=$path?>content/img/Tsunami.jpg">
 								</a>
 							</li>
 							<li class="Item">
-								<a href="<?=$path?>map.php?type=water">医療・避難道具
+								<a href="<?=$path?>region_water.php">医療・避難道具
 									<img src="<?=$path?>content/img/Medical.jpg">
 								</a>
 							</li>
 							<li class="Hinan">
-								<a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所
+								<a href="<?=$path?>region_temporary.php">帰宅困難者避難所
 									<img src="<?=$path?>content/img/Kitaku_Konnan.jpg">
 								</a>
 							</li>
 							<li class="Tbousai">
-								<a href="<?=$path?>map.php?type=shelter">地域防災拠点
+								<a href="<?=$path?>region_dp_base_list.php">地域防災拠点
 									<img src="<?=$path?>content/img/Ti-ki_Bousai.jpg">
 								</a>
 							</li>
