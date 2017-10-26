@@ -35,7 +35,6 @@
 		<?php } ?>
 		<li>
       <?php
-      echo $definition;
         if($definition == "shelter_jp"){
           $type="shelter";
           $lang="jp";
@@ -52,10 +51,8 @@
           $type="water";
           $lang="jp";
         }
-        echo $type;
-        echo $lang;
         ?>
-			<a href="facility.php?id=<?=$result['id']?>&ku=<?=$result['Ward']?>&type=<?=$type?>&lang=<?=$lang?>">
+			<a href="facility.php?id=<?=$result['id']?>&type=<?=$type?>&lang=<?=$lang?>">
 				<div class="base_name"><?=$result["Name"]?></div>
 				<div class="base_address">住所:<?=$result["Address"]?></div>
 			</a>

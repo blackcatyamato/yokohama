@@ -4,7 +4,7 @@
 	$id_test = 1;
 	$type = "shelter";
 	$lang = "jp";
-	$ku = "1";
+	$ku = "%";
 
 
 	if(isset($_GET["id"])){
