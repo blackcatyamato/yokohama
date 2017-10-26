@@ -17,7 +17,7 @@
 		<meta charset="utf-8">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
-
+		<link rel="stylesheet" href="<?=$path?>content/css/Index_header.css">
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
 
 
@@ -104,22 +104,22 @@
 						<ul>
 							<li class="Tunami">
 								<a href="<?=$path?>map.php?type=tsunami">津波避難
-									<img src="<?=$path?>content/img/Tsunami.jpg">
+									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
 							<li class="Item">
 								<a href="<?=$path?>map.php?type=water">医療・避難道具
-									<img src="<?=$path?>content/img/Medical.jpg">
+									<img src="<?=$path?>content/img/medical.jpg">
 								</a>
 							</li>
 							<li class="Hinan">
 								<a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所
-									<img src="<?=$path?>content/img/Kitaku_Konnan.jpg">
+									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
 							<li class="Tbousai">
 								<a href="<?=$path?>map.php?type=shelter">地域防災拠点
-									<img src="<?=$path?>content/img/Ti-ki_Bousai.jpg">
+									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
 						</ul>

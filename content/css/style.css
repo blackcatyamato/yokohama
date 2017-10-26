@@ -36,9 +36,14 @@ header a{
 	line-height: 0;
 }
 
-header img{
-	height:60px;
-	width:450px;
+header picture source{
+	height: 60px;
+	max-width: 100%;
+}
+
+header picture img{
+	height: 60px;
+	width: 90%;
 }
 
 header .menu1{

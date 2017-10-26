@@ -1,6 +1,7 @@
 <?php
 	$path = "";
 
+	$id_test = "%";
 	$type = "shelter";
 	$lang = "jp";
 	$ku = "1";
@@ -160,8 +161,6 @@ if($val1 != null){
 		});
 	};
 	</script>
-
-
 
 
 

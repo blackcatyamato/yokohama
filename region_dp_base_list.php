@@ -16,7 +16,7 @@
 		<main id="0">
 			<div class="base_list">
 				<h2>
-					<span style="margin-right:20px;">地域防災拠点一覧</span><span>Disaster&nbspPrevention&nbspBase</span>
+					<span style="margin-right:20px;">地域防災拠点一覧</span><!--<span>Disaster&nbspPrevention&nbspBase</span>//-->
 				</h2>
 				<div class="ward_link">
 				<ul>
@@ -42,7 +42,7 @@
 				</div>
 				<div class="print">
 				<?php
-					$definition = "地域防災拠点";
+					$definition = "shelter_jp";
 					include "print_1_base.php";
 				 ?>
 				</div>
