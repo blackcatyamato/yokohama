@@ -6,11 +6,22 @@
 	$lang = "jp";
 	$ku = "1";
 
+
+	if(isset($_GET["type"])){
+		$type = $_GET["type"];
+	}
+
+
 	$pdo = new PDO("sqlite:{$path}content/db/sqlite.db");
 	require_once("{$path}content/php/table_select.php");
 
 	$stmt = null;
 	$pdo = null;
+
+
+
+
+
 
 ?>
 
@@ -26,13 +37,13 @@
 	</head>
 	<body>
 			<?php
-				$page = "地域防災拠点";
+				$page = "<?=$facility_title?>";
 				include "./header.php";
 			?>
 		<main id="0">
 			<div class="base_list">
 				<h2>
-					<span style="margin-right:20px;">地域防災拠点一覧</span><!--<span>Disaster&nbspPrevention&nbspBase</span>//-->
+					<span style="margin-right:20px;"><?=$facility_title?>一覧</span><!--<span>Disaster&nbspPrevention&nbspBase</span>//-->
 				</h2>
 				<div class="ward_link">
 				<ul>
@@ -43,7 +54,7 @@
 				</div>
 				<div class="print">
 				<?php
-					$definition = "shelter_jp";
+					$definition = "{$type}_{$lang}";
 					include "print_1_base.php";
 				 ?>
 				</div>

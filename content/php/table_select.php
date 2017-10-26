@@ -64,7 +64,9 @@
 
 
 /******************************/
-switch:
+
+
+switch($type):
 	case "tsunami": $facility_title = "津波避難" ; break;
 	case "water": $facility_title = "医療・避難道具" ; break;
 	case "temporary": $facility_title = "帰宅困難者避難所" ; break;
