@@ -17,8 +17,7 @@
 		<meta charset="utf-8">
 		<title>横浜防災案内-Yokohama Disaster Prevention</title>
 		<link rel="stylesheet" href="<?=$path?>content/css/reset.css">
-
-		<link rel="stylesheet" href="<?=$path?>content/css/jquery.mmenu.all.css">
+		<link rel="stylesheet" href="<?=$path?>content/css/Index_header.css">
 		<link rel="stylesheet" href="<?=$path?>content/css/style.css">
 
 
@@ -55,109 +54,28 @@
 		}
 		</style>
 
-
-		<style>
-		.menu-btn {
-			position: fixed;
-			top: 0;
-			right: 20px;
-			width: 60px;
-			height: 60px;
-			display: block;
-			z-index: 50;
-		}
-
-		.menu-btn span{
-			position: absolute;
-			left: 10px;
-			width: 40px;
-			height: 6px;
-			background: #777;
-			border-radius: 2px;
-		}
-
-		.menu_border1 {
-			top:9px;
-		}
-
-		.menu_border2 {
-			top:24px;
-		}
-
-		.menu_border3 {
-			top:39px;
-		}
-
-		#menu a:hover{
-/*			background: #AAA;*/
-		}
-
-		.menu-btn:hover{
-/*			background: #AAA;*/
-		}
-		</style>
-
 		<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
-		<script src="<?=$path?>content/js/jquery.mmenu.all.js"></script>
-
-<script>
-$(window).on('load resize', function(){
-    $(window).scroll(function() {
-		var scroll = $(window).scrollTop() - 55;
-		$(".menu_border1").css({
-			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
-
-		});
-
-		var scroll = $(window).scrollTop() - 40;
-		$(".menu_border2").css({
-			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
-
-		});
-
-		var scroll = $(window).scrollTop() - 25;
-		$(".menu_border3").css({
-			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
-
-		});
-	});
-});
-</script>
 
 		<script>
-			$(function() {
-				$("#menu").mmenu({
-					offCanvas: {
-						position: "right",
-						zposition: "next"
-					},
-					extensions: [
-						"theme-dark",
-						"pagedim-black"
-					]
-				});
-			});
+		$(document).ready(function() {
+		  var pagetop = $('.pagetop');
+		    $(window).scroll(function () {
+		       if ($(this).scrollTop() > 100) {
+		            pagetop.fadeIn();
+		       } else {
+		            pagetop.fadeOut();
+		            }
+		       });
+		       pagetop.click(function () {
+		           $('body, html').animate({ scrollTop: 0 }, 500);
+		              return false;
+		   });
+		});
 		</script>
-		<script src="<?=$path?>content/js/script.js"></script>
 	</head>
 
 	<body>
 		<div class="wrap">
-			<nav id="menu">
-				<ul>
-					<li><span style="color: #BBB;">マップ</span></li>
-					<li><a href="<?=$path?>map.php?type=tsunami">津波避難</a></li>
-					<li><a href="<?=$path?>map.php?type=water">医療・避難道具</a></li>
-					<li><a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所</a></li>
-					<li><a href="<?=$path?>map.php?type=shelter">地域防災拠点</a></li>
-				</ul>
-			</nav>
-
-			<a class="menu-btn" href="#menu">
-				<span class="menu_border1"></span>
-				<span class="menu_border2"></span>
-				<span class="menu_border3"></span>
-			</a>
 
 			<p class="pagetop"><a href="#">▲</a></p>
 
@@ -186,22 +104,22 @@ $(window).on('load resize', function(){
 						<ul>
 							<li class="Tunami">
 								<a href="<?=$path?>map.php?type=tsunami">津波避難
-									<img src="<?=$path?>content/img/Tsunami.jpg">
+									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
 							<li class="Item">
 								<a href="<?=$path?>map.php?type=water">医療・避難道具
-									<img src="<?=$path?>content/img/Medical.jpg">
+									<img src="<?=$path?>content/img/medical.jpg">
 								</a>
 							</li>
 							<li class="Hinan">
 								<a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所
-									<img src="<?=$path?>content/img/Kitaku_Konnan.jpg">
+									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
 							<li class="Tbousai">
 								<a href="<?=$path?>map.php?type=shelter">地域防災拠点
-									<img src="<?=$path?>content/img/Ti-ki_Bousai.jpg">
+									<img src="<?=$path?>content/img/tsunami2.png">
 								</a>
 							</li>
 						</ul>

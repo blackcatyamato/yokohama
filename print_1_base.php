@@ -4,7 +4,7 @@
     $dbh = new PDO("sqlite:{$path}content/db/sqlite.db");
 
     /*区の数の算出*/
-    $sql = "SELECT MAX(WardCode) as wardnumber FROM shelter_jp";
+    $sql = "SELECT MAX(WardCode) as wardnumber FROM ".$definition;
 		$stmt = $dbh->query($sql);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $wardnumber = $result["wardnumber"];
@@ -26,7 +26,7 @@
 		<?php } ?>
 		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><span><?=$result["Ward"]?></span>
 		<?php
-			if($definition == "地域防災拠点"){
+			if($definition == "shelter_jp"){
 				echo '<a href="map.php?ku='.$result['Ward'].'">→マップから探す</a>';
 			}
 		?>
@@ -34,7 +34,28 @@
        <ul>
 		<?php } ?>
 		<li>
-			<a href="facility.php?id=<?=$result["id"]?>&ward=<?=$result["Ward"]?>&definition=<?=$definition?>">
+      <?php
+      echo $definition;
+        if($definition == "shelter_jp"){
+          $type="shelter";
+          $lang="jp";
+        }
+        if($definition == "temporary_jp"){
+          $type="temporary";
+          $lang="jp";
+        }
+        if($definition == "tsunami_jp"){
+          $type="tsunami";
+          $lang="jp";
+        }
+        if($definition == "water_jp"){
+          $type="water";
+          $lang="jp";
+        }
+        echo $type;
+        echo $lang;
+        ?>
+			<a href="facility.php?id=<?=$result['id']?>&ku=<?=$result['Ward']?>&type=<?=$type?>&lang=<?=$lang?>">
 				<div class="base_name"><?=$result["Name"]?></div>
 				<div class="base_address">住所:<?=$result["Address"]?></div>
 			</a>
