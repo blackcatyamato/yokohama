@@ -15,6 +15,10 @@
 		$type = $_GET["type"];
 	}
 
+	if(isset($_GET["lang"])){
+		$lang = $_GET["lang"];
+	}
+
 
 	if(isset($_GET["ku"])){
 		$ku = $_GET["ku"];
@@ -88,7 +92,7 @@
 		</main>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJPq59HWpcrOlRQqN8gCOv9JpgaJlkZCA"></script>
-	
+
 	<script>
 	var map;
 	var marker = [];
