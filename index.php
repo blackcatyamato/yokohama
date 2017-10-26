@@ -64,7 +64,7 @@
 			width: 60px;
 			height: 60px;
 			display: block;
-			z-index: 5;
+			z-index: 50;
 		}
 
 		.menu-btn span{
@@ -127,10 +127,11 @@ $(window).on('load resize', function(){
 		<script>
 			$(function() {
 				$("#menu").mmenu({
-					"offCanvas": {
-						"position": "right",
+					offCanvas: {
+						position: "right",
+						zposition: "next"
 					},
-					"extensions": [
+					extensions: [
 						"theme-dark",
 						"pagedim-black"
 					]
@@ -142,24 +143,21 @@ $(window).on('load resize', function(){
 
 	<body>
 		<div class="wrap">
-
-
 			<nav id="menu">
 				<ul>
-					<li><a href="<?=$path?>">aaaaa</a></li>
-					<li><a href="<?=$path?>">bbbbb</a></li>
+					<li><span style="color: #BBB;">マップ</span></li>
+					<li><a href="<?=$path?>map.php?type=tsunami">津波避難</a></li>
+					<li><a href="<?=$path?>map.php?type=water">医療・避難道具</a></li>
+					<li><a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所</a></li>
+					<li><a href="<?=$path?>map.php?type=shelter">地域防災拠点</a></li>
 				</ul>
 			</nav>
-
 
 			<a class="menu-btn" href="#menu">
 				<span class="menu_border1"></span>
 				<span class="menu_border2"></span>
 				<span class="menu_border3"></span>
 			</a>
-
-
-
 
 			<p class="pagetop"><a href="#">▲</a></p>
 
