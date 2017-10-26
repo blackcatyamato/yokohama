@@ -26,9 +26,11 @@
 		<?php } ?>
 		<div class="ward_box"><h3 id="<?=$result['WardCode']?>"><span><?=$result["Ward"]?></span>
 		<?php
+		/*
 			if($definition == "shelter_jp"){
 				echo '<a href="map.php?ku='.$result['Ward'].'">→マップから探す</a>';
 			}
+		*/
 		?>
 		</h3>
        <ul>
