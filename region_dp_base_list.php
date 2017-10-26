@@ -2,7 +2,7 @@
 	$path = "";
 
 	$id_test = "%";
-	$type = "water";
+	$type = "shelter";
 	$lang = "jp";
 	$ku = "1";
 
