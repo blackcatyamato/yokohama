@@ -30,7 +30,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<title><?=$facility_title?>-Yokohama Disaster Prevention</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_1.css">
