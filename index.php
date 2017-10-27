@@ -174,16 +174,9 @@
 						</ul>
 					</div>
 
-					<div class="box_info">
-						<p>
-							更新情報：<br>
-							無し
-						</p>
-					</div>
-
 					<div class="box_tutorial">
 							<a href="<?=$path?>dptutorial.php">
-								<span>防災チュートリアル</span>
+								防災チュートリアル
 							</a>
 					</div>
 
