@@ -175,7 +175,7 @@
 					</div>
 
 					<div class="box_tutorial">
-							<a href="<?=$path?>dptutorial.php">
+							<a href="<?=$path?>dptutorial.php?mode=1">
 								防災チュートリアル
 							</a>
 					</div>
