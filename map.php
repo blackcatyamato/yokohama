@@ -83,7 +83,7 @@ if($val1 != null){
 
 <body>
 
-
+<h1><?=$facility_title?></h1>
 	<form method="POST">
 		<select name="lang">
 				<option value ="jp">日本語</option>

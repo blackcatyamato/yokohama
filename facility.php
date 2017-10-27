@@ -4,7 +4,7 @@
 	$id_test = 1;
 	$type = "shelter";
 	$lang = "jp";
-	$ku = "1";
+	$ku = "%";
 
 
 	if(isset($_GET["id"])){
@@ -63,7 +63,7 @@
 		<link rel="stylesheet" href="./content/css/reset.css">
 		<link rel="stylesheet" href="./content/css/style_common.css">
 		<link rel="stylesheet" href="./content/css/style_facility.css">
-		<link rel="stylesheet" href="./content/css/style_header.css">
+		<link rel="stylesheet" href="<?=$path?>content/css/jquery.mmenu.all.css">
 		<title>施設詳細-Yokohama Disaster Prevention</title>
 		<style>
 			#map{
@@ -72,7 +72,115 @@
 				margin: 0 auto;
 			}
 		</style>
+
+		<style>
+		header{
+			background:white;
+			height: 70px;
+			text-align: center;
+			border-bottom: 1px solid gray;
+		}
+
+		header h1{
+			padding-top: 5px;
+			padding-left: 5px;
+		}
+
+		header a{
+			display: inline-block;
+			line-height: 0;
+		}
+
+		header picture source{
+			height: 60px;
+			max-width: 100%;
+		}
+
+		header picture img{
+			height: 60px;
+			width: 90%;
+		}
+		</style>
+
+		<style>
+		.pagetop {
+		    display: none;
+		    position: fixed;
+		    bottom: 30px;
+		    right: 15px;
+		}
+		.pagetop a {
+		    display: block;
+		    background-color: #555;
+		    text-align: center;
+		    color: #222;
+		    font-size: 12px;
+		    text-decoration: none;
+		    padding: 5px 10px;
+			filter:alpha(opacity=50);
+		    -moz-opacity: 0.5;
+		    opacity: 0.5;
+		}
+		.pagetop a:hover {
+		    display: block;
+		    background-color: #b2d1fb;
+		    text-align: center;
+		    color: #fff;
+		    font-size: 12px;
+		    text-decoration: none;
+		    padding:5px 10px;
+			filter:alpha(opacity=50);
+		    -moz-opacity: 0.5;
+		    opacity: 0.5;
+		}
+		</style>
+
+
+		<style>
+		.menu-btn {
+			position: fixed;
+			top: 0;
+			right: 20px;
+			width: 60px;
+			height: 60px;
+			display: block;
+			z-index: 50;
+		}
+
+		.menu-btn span{
+			position: absolute;
+			left: 10px;
+			width: 40px;
+			height: 6px;
+			background: #777;
+			border-radius: 2px;
+		}
+
+		.menu_border1 {
+			top:9px;
+		}
+
+		.menu_border2 {
+			top:24px;
+		}
+
+		.menu_border3 {
+			top:39px;
+		}
+
+		#menu a:hover{
+/*			background: #AAA;*/
+		}
+
+		.menu-btn:hover{
+/*			background: #AAA;*/
+		}
+		</style>
+
 		<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
+		<script src="<?=$path?>content/js/jquery.mmenu.all.js"></script>
+
+		<script src="<?=$path?>content/js/script.js"></script>
 	</head>
 
 		<?php
@@ -80,6 +188,31 @@
 			include "./header.php";
 		?>
 	<body>
+	<div class="wrap">
+
+
+			<nav id="menu">
+				<ul>
+					<li><span style="color: #BBB;">リスト</span></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=tsunami">津波避難</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=water">医療・避難道具</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=temporary">帰宅困難者避難所</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=shelter">地域防災拠点</a></li>
+					<li><span style="color: #BBB;">マップ</span></li>
+					<li><a href="<?=$path?>map.php?type=tsunami" target="_blank">津波避難</a></li>
+					<li><a href="<?=$path?>map.php?type=water" target="_blank">医療・避難道具</a></li>
+					<li><a href="<?=$path?>map.php?type=temporary" target="_blank">帰宅困難者避難所</a></li>
+					<li><a href="<?=$path?>map.php?type=shelter" target="_blank">地域防災拠点</a></li>
+				</ul>
+			</nav>
+
+			<a class="menu-btn" href="#menu">
+				<span class="menu_border1"></span>
+				<span class="menu_border2"></span>
+				<span class="menu_border3"></span>
+			</a>
+
+
 		<main>
 			<div class="fa_box">
 				<h3><?=$name[1]?><?=$ward[1]?></h3>
@@ -148,6 +281,6 @@
 		});
 	};
 	</script>
-
+	</div>
 	</body>
 </html>

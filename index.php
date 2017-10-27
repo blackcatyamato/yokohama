@@ -100,44 +100,6 @@
 		<script src="<?=$path?>content/js/jquery-3.2.1.min.js"></script>
 		<script src="<?=$path?>content/js/jquery.mmenu.all.js"></script>
 
-<script>
-$(window).on('load resize', function(){
-    $(window).scroll(function() {
-		var scroll = $(window).scrollTop() - 55;
-		$(".menu_border1").css({
-			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
-
-		});
-
-		var scroll = $(window).scrollTop() - 40;
-		$(".menu_border2").css({
-			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
-
-		});
-
-		var scroll = $(window).scrollTop() - 25;
-		$(".menu_border3").css({
-			background: "linear-gradient(0, white 0%, white " + (0 + scroll * 16) + "%, #777 " + (0 + scroll * 16) + "%, #777 100%)"
-
-		});
-	});
-});
-</script>
-
-		<script>
-			$(function() {
-				$("#menu").mmenu({
-					offCanvas: {
-						position: "right",
-						zposition: "next"
-					},
-					extensions: [
-						"theme-dark",
-						"pagedim-black"
-					]
-				});
-			});
-		</script>
 		<script src="<?=$path?>content/js/script.js"></script>
 	</head>
 
@@ -145,11 +107,16 @@ $(window).on('load resize', function(){
 		<div class="wrap">
 			<nav id="menu">
 				<ul>
+					<li><span style="color: #BBB;">リスト</span></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=tsunami">津波避難</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=water">医療・避難道具</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=temporary">帰宅困難者避難所</a></li>
+					<li><a href="<?=$path?>region_dp_base_list.php?type=shelter">地域防災拠点</a></li>
 					<li><span style="color: #BBB;">マップ</span></li>
-					<li><a href="<?=$path?>map.php?type=tsunami">津波避難</a></li>
-					<li><a href="<?=$path?>map.php?type=water">医療・避難道具</a></li>
-					<li><a href="<?=$path?>map.php?type=temporary">帰宅困難者避難所</a></li>
-					<li><a href="<?=$path?>map.php?type=shelter">地域防災拠点</a></li>
+					<li><a href="<?=$path?>map.php?type=tsunami" target="_blank">津波避難</a></li>
+					<li><a href="<?=$path?>map.php?type=water" target="_blank">医療・避難道具</a></li>
+					<li><a href="<?=$path?>map.php?type=temporary" target="_blank">帰宅困難者避難所</a></li>
+					<li><a href="<?=$path?>map.php?type=shelter" target="_blank">地域防災拠点</a></li>
 				</ul>
 			</nav>
 
